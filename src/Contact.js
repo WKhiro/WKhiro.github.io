@@ -2,6 +2,6 @@ import React from 'react';
 
 export const Contact = () => (
   <div>
-    <p> Test </p>
+    <p> Contact me here </p>
   </div>
 )
