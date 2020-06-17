@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import cat from '../assets/newI.png';
+import tester from '../assets/night.jpg';
 
 const Styles = styled.div`
   .navbar {
-    background-color: #222;
+    background: #EFE;
+    min-height: 200px;
+    z-index: 1000;
   }
 
   a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
+    color: #000;
     text-shadow: 2px 2px 5px red;
-
+    font-size: 50px;
     &:hover {
       color: white;
       text-decoration: none;
