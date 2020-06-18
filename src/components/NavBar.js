@@ -16,7 +16,7 @@ const Styles = styled.div`
     /* horizontal-pos, vertical-pos, blur radius, color */
     /*text-shadow: 2px 2px 4px #0066CC;*/
     font-size: 50px;
-    font-family: "Permanent Marker";
+    font-family: "Varela";
     margin-left: 20px;
     margin-right: 20px;
     &::after {
@@ -35,6 +35,7 @@ const Styles = styled.div`
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-family: "Permanent Marker";
   }
 `;
 

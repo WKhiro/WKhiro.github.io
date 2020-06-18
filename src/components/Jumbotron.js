@@ -8,7 +8,7 @@ const Styles = styled.div`
     background: url(${cityImage}) no-repeat fixed bottom;
     background-size: cover;
     color: #efefef;
-    height: 200px;
+    height: 500px;
     position: relative;
     z-index: -2;
     margin-bottom: 0;
