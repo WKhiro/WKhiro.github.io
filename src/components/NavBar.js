@@ -15,6 +15,7 @@ const Styles = styled.div`
     color: #000;
     /* horizontal-pos, vertical-pos, blur radius, color */
     /*text-shadow: 2px 2px 4px #0066CC;*/
+
     font-size: 50px;
     font-family: "Varela";
     margin-left: 20px;
@@ -35,14 +36,18 @@ const Styles = styled.div`
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-family: "Permanent Marker";
+    font-family: "Balsamiq Sans";
+    text-shadow: 2px 2px 4px #0066CC;
+  }
+  .spacing {
+    margin-right: 10px;
   }
 `;
 
 export const NavBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand className="navbar-brand" href="/"><img src={cat}/>WKhiro</Navbar.Brand>
+      <Navbar.Brand className="navbar-brand" href="/"><img className="spacing" src={cat} margin={25}/>WKhiro</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
