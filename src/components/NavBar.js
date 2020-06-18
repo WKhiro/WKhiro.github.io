@@ -3,12 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import cat from '../assets/favicon.png';
-import tester from '../assets/night.jpg';
 
 const Styles = styled.div`
   .navbar {
     min-height: 200px;
-    z-index: 1000;
+    z-index: 0;
   }
 
   .navbar-brand, .navbar-nav .nav-link {
@@ -52,8 +51,9 @@ export const NavBar = () => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item><NavLink className="nav-link" activeClassName="active" exact to="/" >Home</NavLink></Nav.Item>
-          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/about">Blog</NavLink></Nav.Item>
-          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/contact">Projects</NavLink></Nav.Item>
+          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/blog">Blog</NavLink></Nav.Item>
+          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/projects">Projects</NavLink></Nav.Item>
+          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/contact">Contact</NavLink></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

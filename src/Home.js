@@ -1,180 +1,236 @@
 import React from 'react';
-import { Cat } from './components/Cat';
-import city from './assets/clouds.jpg';
-import styled, { keyframes } from 'styled-components';
 import Container from 'react-bootstrap/Container';
 import { Row, Col } from 'react-flexbox-grid';
-import Particles from 'react-particles-js';
+import { Particles } from 'react-particles-js';
 import { Spring } from 'react-spring/renderprops';
-import { FaLinkedin, FaGithub, FaCopyright, IconContextProvider } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaCopyright } from "react-icons/fa";
+import { GiGamepad } from "react-icons/gi";
 import { IconContext } from "react-icons";
+import styled, { keyframes } from 'styled-components';
+import punchy from './assets/punchy.png';
 
-const Texts = styled.p`
-.testas
-{
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 1));
-  margin-right: 10px;
-}
+const StyledText = styled.p`
+  .icon {
+    filter: drop-shadow(2px 2px 4px black);
+    margin-right: 10px;
+    display: inline;
+  }
+`;
+
+const StyledImg = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 `;
 
 const Styles = styled.div`
 
-.box{
-  background:linear-gradient(rgba(250,0,0,0.5),transparent);
-  background-color:purple; /*this your primary color*/
+/* Background configuration */
+.gradient
+{
+  background: linear-gradient(rgba(250, 0, 0, 0.5), transparent), no-repeat;
+  background-color: purple; /* primary color of gradient */
   background-size: cover;
-  position:fixed;
-  width:100%;
-  height:100%;
-  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background-position: 50% 50%;
-  z-index:-3;
+  z-index: -3;
 }
-.part {
+
+.gradientContainer
+{
   position: absolute;
-top: 0;
-left: 0;
-z-index: 0;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
-  .divx {
 
-position:fixed;
-    /*background: url(${city}) no-repeat fixed bottom;*/
-    opacity:0.8;
-  /*  background-color:#ccc;*/
-    background-size: cover;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    z-index:-3;
-  }
-  .divy {
-        position: relative;
-      }
-  .textx {
+/* Text columns */
+.welcomeText
+{
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  border-style: solid;
+  padding: 50px;
+}
 
-    color: white;
-    text-shadow: 2px 2px 4px black;
-      border-style: solid;
-      padding: 50px;
-  }
-  .texty {
+.welcomeText.right
+{
+  margin-left: 20px;
+}
 
-      color: white;
-      text-shadow: 2px 2px 4px black;
-      border-style: solid;
-      padding: 50px;
-      margin-left: 20px;
-  }
-  .reference {
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* Copyright text */
+.bottomText
+{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.bottomText.copyRight
+{
+  margin-bottom: 20px;
+}
+
+.header
+{
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-  }
-  .copyx {
     margin-bottom: 20px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-  }
-  a {
-    color: aqua;
-    text-decoration: none;
-  }
-  .main {
-    text-align: center;
-  }
+}
+
+.headerH3
+{
+  display: inline;
+}
+
+.gameIcon
+{
+  filter: drop-shadow(2px 2px 4px black);
+  margin-left: 10px;
+}
+
+a
+{
+  color: aqua;
+  text-decoration: none;
+}
+
 `;
 
 export const Home = () => (
-  // return () here is removed due to ^
   <Styles>
-  <div className="part">
-  <Particles className="box"
-  params={{
-
-    particles: {
-      color: {
-        value: "#FFFFFF"
-      },
-      line_linked: {
-        color: {
-          value: "#33A3FF"
+    <div className="gradientContainer">
+    {/* Value_area: smaller = denser clusters */}
+      <Particles className="gradient" params={{
+        particles: {
+          color: {
+            value: "#FFFFFF"
+          },
+          line_linked: {
+            color: {
+              value: "#33A3FF"
+            }
+          },
+          number: {
+            value: 50,
+            density: {
+              enable: true,
+              value_area: 600
+            }
+          },
+          size: {
+            value: 3
+          }
         }
-      },
-      number: {
-        value: 50,
-        density: {
-  enable: true,
-  value_area: 600 // denser the smaller the number
-}
-      },
-      size: {
-        value: 3
-      }
-    }
-  }}
-/>
-</div>
-    <Container className="divy">
-      <Row top='xs'>
-      {/* 1000 is a second */}
-        <Spring from={{opacity:0}}
-        to={{opacity:1}}
-        config={{delay:100, duration: 1000}}>
+      }}
+      />
+    </div>
+
+    <Container>
+      <Row top="xs">
+        <Spring from={{opacity: 0}} to={{opacity: 1}}
+        config={{delay: 100, duration: 1000}}>
         {props =>
-        <Col xs className="textx" style={props}>
-          <h1 className="main"> Welcome! </h1>
+        <Col xs className="welcomeText" style={props}>
+          <h1 className="header">Welcome!</h1>
           <p>
             This is my personal website. I either linked you here myself,
-            or you got here via my GitHub. Either way, you'll find personal
-            information, projects, and other random posts I decide to make here.
+            or you got here via my GitHub. Either way, you can learn more about
+            me by reading the section to the right, or look at my blog or
+            projects page. <br/><br/> Here are some handy links if you want to
+            view my LinkedIn or my projects directly on Github!
           </p>
-          <Texts>
-          <IconContext.Provider value={{ size: '1.5em' }}><FaLinkedin className="testas"/></IconContext.Provider> LinkedIn
-          </Texts>
-          <Texts>
-          <IconContext.Provider value={{ size: '1.5em' }}><FaGithub className="testas"/></IconContext.Provider> GitHub
-          </Texts>
-        </Col>}
-        </Spring>
-        <Spring from={{opacity:0}}
-        to={{opacity:1}}
-        config={{delay:500, duration: 1000}}>
-        {props =>
-        <Col xs className="texty" style={props}>
-          <h1 className="main"> About Me </h1>
-            <h3> Who Am I? </h3>
-            <p> I'm Wesley. I'm a fresh graduate, and an aspiring software
-            engineer. Besides pursuing formal education in Computer Science
-            through university courses, I began my journey into
-            software development by tinkering around with technologies I found
-            interesting to me, such as ReactJS, Unity, and Android Studio.
-            </p>
-            <h3> Alma Mater </h3>
-            <ul>
-              <li> University of California - San Diego </li>
-              <li> B.S. in Computer Science (Spring 2020) </li>
-            </ul>
-            <h6> Favorite Courses </h6>
-            <ul>
-              <li> Artificial Intelligence </li>
-              <li> Computer Security </li>
-              <li> Computer Graphics </li>
-            </ul>
-            <h3> Hobbies and Interests </h3>
-            <p> I love playing video games and badminton. I was an active member of the UCSD Badminton Team; I've played badminton for my respective school team for 8 years. I also play badminton outside of school recreationally.</p>
-            <p> I'm also an avid gamer; I mostly enjoy playing League of Legends and Nintendo games. </p>
+          <a href="https://www.linkedin.com/in/wesley-kok/">
+            <StyledText>
+              <p className="icon">
+                <IconContext.Provider value={{ size: '1.5em' }}>
+                  <FaLinkedin />
+                </IconContext.Provider>
+              </p>
+              LinkedIn
+            </StyledText>
+          </a>
+          <a href="https://github.com/WKhiro">
+            <StyledText>
+              <p className="icon">
+                <IconContext.Provider value={{ size: '1.5em' }}>
+                  <FaGithub />
+                </IconContext.Provider>
+              </p>
+              GitHub
+            </StyledText>
+          </a>
+          <StyledImg src={punchy} />
         </Col>
-      }
-      </Spring>
+        }
+        </Spring>
+
+        <Spring from={{opacity: 0}} to={{opacity: 1}}
+        config={{delay: 500, duration: 1000}}>
+        {props =>
+        <Col xs className="welcomeText right" style={props}>
+          <h1 className="header"> About Me </h1>
+            <h3>Who Am I?</h3>
+            <p>
+              I'm Wesley. I'm a fresh graduate, and an aspiring software
+              engineer. Besides pursuing formal education in Computer Science
+              through university courses, I began my journey into
+              software development by tinkering around with technologies I found
+              interesting to me, such as ReactJS, Unity, and Android Studio.
+              I've been exposed to a lot of coding languages as well, but never
+              truly got to specialize in a select few. Currently, I'm aimming to
+              specialize more in Python, JavaScript, and HTML5/CSS3. Recently,
+              I've been searching for an entry-level software engineer position
+              whilst improving my coding proficiency in the meantime.
+            </p>
+            <h3>Alma Mater</h3>
+            <ul>
+              <li>University of California - San Diego</li>
+              <li>B.S. in Computer Science (Spring 2020)</li>
+            </ul>
+            <h6>Favorite Courses</h6>
+            <ul>
+              <li>Artificial Intelligence</li>
+              <li>Computer Security</li>
+              <li>Computer Graphics</li>
+            </ul>
+            <h3 className="headerH3">
+              Hobbies and Interests
+              <IconContext.Provider value={{ size: '1.5em' }}>
+                <GiGamepad className="gameIcon"/>
+              </IconContext.Provider>
+            </h3>
+            <p>
+              I love playing video games and badminton. I was an active member
+              of the UCSD Badminton Team, and have played for my respective
+              school's team since high school (8 years). Outside of team
+              practice, I often played badminton recreationally as well
+              (although not recently due to COVID-19)
+            </p>
+            <p>
+              I'm also an avid gamer; I mostly enjoy playing League of Legends
+              and Nintendo games. I adore cats as well.
+            </p>
+        </Col>
+        }
+        </Spring>
       </Row>
-      <div className="reference">Favicon is made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-      <div className="copyx"><Texts><IconContext.Provider value={{ size: '1.5em' }}><FaCopyright className="testas"/></IconContext.Provider>2020 Wesley Kok</Texts></div>
+
+      <div className="bottomText">Favicon is made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from<a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      </div>
+
+      <div className="bottomText copyRight">
+        <StyledText>
+          <IconContext.Provider value={{ size: '1.5em' }}>
+            <FaCopyright className="icon"/>
+          </IconContext.Provider>
+          2020 Wesley Kok
+        </StyledText>
+      </div>
     </Container>
   </Styles>
 )
