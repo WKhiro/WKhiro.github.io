@@ -38,7 +38,7 @@ export const Blog = () => (
   <Styles>
     <GradientBackground />
     <Container>
-      <Spring from={{opacity: 0, transform: "translate(60%,0)"}} to={{opacity: 1, transform: "translate(0%,0)"}}
+      <Spring from={{opacity: 0}} to={{opacity: 1}}
       config={{delay: 100, duration: 1000}}>
       {props =>
       <Container className="squeeze" style={props}>
@@ -50,10 +50,10 @@ export const Blog = () => (
           application (SPA) in the hopes of having a very fast website without
           the need to reload pages during use, but GitHub doesn't natively
           support single-page applications. As a result, I needed to import
-          a 404.html file into my build folder, and a redirection script into
-          my index.html in order to handle 404 errors and redirect to the
-          correct pages. Until I figured out that this was an common issue,
-          I had thought I written a broken website!
+          a special 404.html file into my build folder, and a redirection
+          script into my index.html in order to handle 404 errors and redirect
+          to the correct pages. Until I figured out that this was an common
+          issue, I had thought I written a broken website.
         </p>
         <p className="postText">
           6/19/2020
@@ -62,8 +62,8 @@ export const Blog = () => (
       }
       </Spring>
 
-      <Spring from={{opacity: 0, transform: "translate(60%,0)"}} to={{opacity: 1, transform: "translate(0%,0)"}}
-      config={{delay: 900, duration: 1000}}>
+      <Spring from={{opacity: 0}} to={{opacity: 1}}
+      config={{delay: 500, duration: 1000}}>
       {props =>
       <Container className="squeeze" style={props}>
         <h1 className="header">First Post!</h1>
