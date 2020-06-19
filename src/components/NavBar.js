@@ -59,8 +59,8 @@ export const NavBar = () => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item><NavLink className="nav-link" activeClassName="active" exact to="/" >Home</NavLink></Nav.Item>
-          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/blog">Blog</NavLink></Nav.Item>
           <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/projects">Projects</NavLink></Nav.Item>
+          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/blog">Blog</NavLink></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

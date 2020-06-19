@@ -79,6 +79,11 @@ const Styles = styled.div`
   margin-left: 10px;
 }
 
+a
+{
+  text-decoration: none;
+}
+
 `;
 
 export const Home = () => (

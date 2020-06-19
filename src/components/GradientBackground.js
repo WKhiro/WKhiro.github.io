@@ -2,7 +2,7 @@ import React from 'react';
 import { Particles } from 'react-particles-js';
 import styled from 'styled-components';
 
-const BackgroundStyle= styled.div`
+const BackgroundStyle = styled.div`
 
 /* Background configuration */
 .gradient

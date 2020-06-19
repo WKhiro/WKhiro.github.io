@@ -3,7 +3,7 @@ import { FaCopyright } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import styled from 'styled-components';
 
-const ReferenceStyle= styled.div`
+const ReferenceStyle = styled.div`
 
 .icon
 {

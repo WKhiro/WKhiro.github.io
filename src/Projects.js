@@ -4,6 +4,7 @@ import { Spring } from 'react-spring/renderprops';
 import { GradientBackground } from './components/GradientBackground';
 import { Reference } from './components/Reference';
 import styled from 'styled-components';
+import statue from './assets/statue.png';
 import wyvern from './assets/wyvern.png';
 import movie from './assets/movie.png';
 
@@ -48,21 +49,19 @@ export const Projects = () => (
       config={{delay: 100, duration: 1000}}>
       {props =>
       <div className="project image" style={props}>
-        <a href="https://wkhiro.itch.io/wyvern">
-          <img src={wyvern} alt="" />
+        <a href="https://github.com/WKhiro/Statue_In_Space">
+          <img src={statue} alt="" />
         </a>
       </div>
       }
       </Spring>
       <Container>
-        <h1 className="project text">Wyvern's Wrath</h1>
-        <h5 className="project text">2018</h5>
+        <h1 className="project text">Statue in Space</h1>
+        <h5 className="project text">2019</h5>
         <p className="project text">
-          A mobile game application written in JavaScript
-          utilizing the Phaser framework. It was then ported over to Android
-          Studio using Apache Cordova, allowing it to run in browser and on
-          mobile devices!
-          </p>
+          An OpenGL project showcasing the implementation of a variety of
+          computer graphics features, such as shadow mapping and bloom.
+        </p>
       </Container>
       </Container>
 
