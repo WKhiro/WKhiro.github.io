@@ -1,35 +1,14 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import { Particles } from 'react-particles-js';
 import { Spring } from 'react-spring/renderprops';
 import { FaCopyright } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { GradientBackground } from './components/GradientBackground';
 import styled from 'styled-components';
 import wyvern from './assets/wyvern.png';
 import movie from './assets/movie.png';
 
 const Styles = styled.div`
-
-/* Background configuration */
-.gradient
-{
-  background: linear-gradient(rgba(250, 0, 0, 0.5), transparent), no-repeat;
-  background-color: purple; /* primary color of gradient */
-  background-size: cover;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-position: 50% 50%;
-  z-index: -3;
-}
-
-.gradientContainer
-{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
 
 .icon
 {
@@ -96,36 +75,34 @@ a
 
 export const Projects = () => (
   <Styles>
-    <div className="gradientContainer">
-    {/* Value_area: smaller = denser clusters */}
-      <Particles className="gradient" params={{
-        particles: {
-          color: {
-            value: "#FFFFFF"
-          },
-          line_linked: {
-            color: {
-              value: "#33A3FF"
-            }
-          },
-          number: {
-            value: 50,
-            density: {
-              enable: true,
-              value_area: 600
-            }
-          },
-          size: {
-            value: 3
-          }
-        }
-      }}
-      />
-    </div>
+    <GradientBackground />
     <Container>
       <Container className="project">
       <Spring from={{opacity: 0}} to={{opacity: 1}}
       config={{delay: 100, duration: 1000}}>
+      {props =>
+      <div className="project image" style={props}>
+        <a href="https://wkhiro.itch.io/wyvern">
+          <img src={wyvern} alt="" />
+        </a>
+      </div>
+      }
+      </Spring>
+      <Container>
+        <h1 className="project text">Wyvern's Wrath</h1>
+        <h5 className="project text">2018</h5>
+        <p className="project text">
+          A mobile game application written in JavaScript
+          utilizing the Phaser framework. It was then ported over to Android
+          Studio using Apache Cordova, allowing it to run in browser and on
+          mobile devices!
+          </p>
+      </Container>
+      </Container>
+
+      <Container className="project">
+      <Spring from={{opacity: 0}} to={{opacity: 1}}
+      config={{delay: 500, duration: 1000}}>
       {props =>
       <div className="project image" style={props}>
         <a href="https://wkhiro.itch.io/wyvern">
@@ -148,7 +125,7 @@ export const Projects = () => (
 
       <Container className="project">
       <Spring from={{opacity: 0}} to={{opacity: 1}}
-      config={{delay: 500, duration: 1000}}>
+      config={{delay: 900, duration: 1000}}>
       {props =>
       <div className="project image" style={props}>
         <a href="http://project-cinescope.s3-website-us-west-2.amazonaws.com/">
@@ -158,7 +135,7 @@ export const Projects = () => (
       }
       </Spring>
       <Container>
-        <h1 className="project text">CineScope</h1>
+        <h1 className="project text">Cinescope</h1>
         <h5 className="project text">2018</h5>
         <p className="project text">
           A web application also written in ReactJS. Aggregates movie ratings
