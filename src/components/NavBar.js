@@ -54,7 +54,7 @@ const Styles = styled.div`
 export const NavBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand className="navbar-brand" href="/"><img className="spacing" src={cat} alt="" margin={25}/>WKhiro</Navbar.Brand>
+      <Navbar.Brand className="navbar-brand" href="/Personal_Website/"><img className="spacing" src={cat} alt="" margin={25}/>WKhiro</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
