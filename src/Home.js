@@ -2,11 +2,12 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { Row, Col } from 'react-flexbox-grid';
 import { Spring } from 'react-spring/renderprops';
-import { FaLinkedin, FaGithub, FaCopyright } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
 import { MdMailOutline } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { GradientBackground } from './components/GradientBackground';
+import { Reference } from './components/Reference';
 import styled from 'styled-components';
 import punchy from './assets/punchy.png';
 
@@ -76,27 +77,6 @@ const Styles = styled.div`
 {
   filter: drop-shadow(2px 2px 4px black);
   margin-left: 10px;
-}
-
-/* Copyright text */
-.bottomText
-{
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 4px black;
-}
-
-.bottomText.copyRight
-{
-  margin-bottom: 20px;
-}
-
-a
-{
-  color: aqua;
-  text-decoration: none;
 }
 
 `;
@@ -204,15 +184,7 @@ export const Home = () => (
         }
         </Spring>
       </Row>
-
-      <div className="bottomText">Favicon is made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from<a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-      </div>
-      <div className="bottomText copyRight">
-        <IconContext.Provider value={{ size: '1.5em' }}>
-          <div className="icon"><FaCopyright /></div>
-        </IconContext.Provider>
-        <div className="iconText">2020 Wesley Kok</div>
-      </div>
+      <Reference />
     </Container>
   </Styles>
 )
