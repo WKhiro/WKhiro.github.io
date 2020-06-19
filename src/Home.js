@@ -254,13 +254,11 @@ export const Home = () => (
 
       <div className="bottomText">Favicon is made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from<a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
       </div>
-
       <div className="bottomText copyRight">
-
-          <IconContext.Provider value={{ size: '1.5em' }}>
-            <FaCopyright className="icon"/>
-          </IconContext.Provider>
-          2020 Wesley Kok
+        <IconContext.Provider value={{ size: '1.5em' }}>
+          <div className="icon"><FaCopyright /></div>
+        </IconContext.Provider>
+        <div className="iconText">2020 Wesley Kok</div>
       </div>
     </Container>
   </Styles>

@@ -8,7 +8,7 @@ import { GiGamepad } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import styled, { keyframes } from 'styled-components';
 import punchy from './assets/wyvern.png';
-import movie from './assets/movies.png';
+import movie from './assets/movie.png';
 
 const StyledText = styled.p`
   .icon {

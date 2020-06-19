@@ -7,16 +7,8 @@ import { FaLinkedin, FaGithub, FaCopyright } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import styled, { keyframes } from 'styled-components';
-import punchy from './assets/wyvern.png';
-import movie from './assets/movies.png';
-
-const StyledText = styled.p`
-  .icon {
-    filter: drop-shadow(2px 2px 4px black);
-    margin-right: 10px;
-    display: inline;
-  }
-`;
+import wyvern from './assets/wyvern.png';
+import movie from './assets/movie.png';
 
 const Styles = styled.div`
 
@@ -46,14 +38,30 @@ const Styles = styled.div`
 {
   color: white;
   text-shadow: 2px 2px 4px black;
-  border-style: solid;
   padding: 50px;
 }
 
 .welcomeText.right
 {
-  padding: 50px;
   margin-left: 20px;
+}
+
+.header
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon
+{
+  display: inline;
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+.iconText
+{
+  display: inline;
+  margin-left: 10px;
 }
 
 /* Copyright text */
@@ -71,36 +79,22 @@ const Styles = styled.div`
   margin-bottom: 20px;
 }
 
-.header
-{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.headerH3
-{
-  display: inline;
-}
-
-.gameIcon
-{
-  filter: drop-shadow(2px 2px 4px black);
-  margin-left: 10px;
-}
-
 a
 {
   color: aqua;
   text-decoration: none;
 }
 
-.parent
+.project
 {
   display: inline-flex;
 }
 
-/*mins: prevent jerking during animation, max for column height when squishing*/
-.parent.narrow
+/*
+  mins: prevent web page repositioning during animation
+  maxs: prevent elongated column height when reducing page size
+*/
+.project.image
 {
     min-width: 202px;
     min-height: 321px;
@@ -111,19 +105,12 @@ a
     margin-right: 50px;
 }
 
-.parent.real
+.project.text
 {
   color: white;
   text-shadow: 2px 2px 4px black;
-    margin-right: 30px;
-    flex: 1;
-}
-
-.parent.real.smooth
-{
-  color: white;
-  text-shadow: 2px 2px 4px black;
-    flex: 1;
+  flex: 1;
+  margin-right: 30px;
 }
 
 `;
@@ -157,60 +144,59 @@ export const Projects = () => (
       />
     </div>
     <Container>
-    <Container className="parent">
-    <Spring from={{opacity: 0}} to={{opacity: 1}}
-    config={{delay: 100, duration: 1000}}>
-    {props =>
-      <div className="parent narrow" style={props}>
-          <a href="https://wkhiro.itch.io/wyvern">
-            <img src={punchy} />
-          </a>
+      <Container className="project">
+      <Spring from={{opacity: 0}} to={{opacity: 1}}
+      config={{delay: 100, duration: 1000}}>
+      {props =>
+      <div className="project image" style={props}>
+        <a href="https://wkhiro.itch.io/wyvern">
+          <img src={wyvern} />
+        </a>
       </div>
-    }
-    </Spring>
+      }
+      </Spring>
       <Container>
-      <h1 className="parent real">Wyvern's Wrath</h1>
-      <h3 className="parent real smooth">2018</h3>
-      <p className="parent real">
-        A mobile game application written in JavaScript
-        utilizing the Phaser framework. It was then ported over to Android Studio
-        using Apache Cordova, allowing it to run in browser and on mobile devices!
-      </p>
+        <h1 className="project text">Wyvern's Wrath</h1>
+        <h5 className="project text">2018</h5>
+        <p className="project text">
+          A mobile game application written in JavaScript
+          utilizing the Phaser framework. It was then ported over to Android
+          Studio using Apache Cordova, allowing it to run in browser and on
+          mobile devices!
+        </p>
       </Container>
-    </Container>
+      </Container>
 
-    <Container className="parent">
-    <Spring from={{opacity: 0}} to={{opacity: 1}}
-    config={{delay: 500, duration: 1000}}>
-    {props =>
-      <div className="parent narrow" style={props}>
-          <a href="http://project-cinescope.s3-website-us-west-2.amazonaws.com/">
-            <img src={movie} />
-          </a>
+      <Container className="project">
+      <Spring from={{opacity: 0}} to={{opacity: 1}}
+      config={{delay: 500, duration: 1000}}>
+      {props =>
+      <div className="project image" style={props}>
+        <a href="http://project-cinescope.s3-website-us-west-2.amazonaws.com/">
+          <img src={movie} />
+        </a>
       </div>
-    }
-    </Spring>
+      }
+      </Spring>
       <Container>
-      <h1 className="parent real">CineScope</h1>
-      <h5 className="parent real">2018</h5>
-      <p className="parent real">
-        A web application also written in ReactJS. Aggregates movie ratings
-        and reviews across multiple popular movie database sites for ease of
-        viewing and comparison. Features user account creation with the usage
-        of Firebase authentication.
-      </p>
+        <h1 className="project text">CineScope</h1>
+        <h5 className="project text">2018</h5>
+        <p className="project text">
+          A web application also written in ReactJS. Aggregates movie ratings
+          and reviews across multiple popular movie database sites for ease of
+          viewing and comparison. Features user account creation with the usage
+          of Firebase authentication.
+        </p>
       </Container>
-    </Container>
-    <div className="bottomText">Favicon is made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from<a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-    </div>
-    <div className="bottomText copyRight">
-      <StyledText>
+      </Container>
+      <div className="bottomText">Favicon is made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from<a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      </div>
+      <div className="bottomText copyRight">
         <IconContext.Provider value={{ size: '1.5em' }}>
-          <FaCopyright className="icon"/>
+          <div className="icon"><FaCopyright /></div>
         </IconContext.Provider>
-        2020 Wesley Kok
-      </StyledText>
-    </div>
+        <div className="iconText">2020 Wesley Kok</div>
+      </div>
     </Container>
   </Styles>
 )
