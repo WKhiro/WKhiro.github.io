@@ -7,7 +7,7 @@ import { FaLinkedin, FaGithub, FaCopyright } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
 import { MdMailOutline } from "react-icons/md";
 import { IconContext } from "react-icons";
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import punchy from './assets/punchy.png';
 
 const StyledImg = styled.img`

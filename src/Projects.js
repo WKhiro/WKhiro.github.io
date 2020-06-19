@@ -1,12 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import { Row, Col } from 'react-flexbox-grid';
 import { Particles } from 'react-particles-js';
 import { Spring } from 'react-spring/renderprops';
-import { FaLinkedin, FaGithub, FaCopyright } from "react-icons/fa";
-import { GiGamepad } from "react-icons/gi";
+import { FaCopyright } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import wyvern from './assets/wyvern.png';
 import movie from './assets/movie.png';
 
@@ -31,25 +29,6 @@ const Styles = styled.div`
   top: 0px;
   left: 0px;
   z-index: -1;
-}
-
-/* Text columns */
-.welcomeText
-{
-  color: white;
-  text-shadow: 2px 2px 4px black;
-  padding: 50px;
-}
-
-.welcomeText.right
-{
-  margin-left: 20px;
-}
-
-.header
-{
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .icon
@@ -150,7 +129,7 @@ export const Projects = () => (
       {props =>
       <div className="project image" style={props}>
         <a href="https://wkhiro.itch.io/wyvern">
-          <img src={wyvern} />
+          <img src={wyvern} alt="" />
         </a>
       </div>
       }
@@ -173,7 +152,7 @@ export const Projects = () => (
       {props =>
       <div className="project image" style={props}>
         <a href="http://project-cinescope.s3-website-us-west-2.amazonaws.com/">
-          <img src={movie} />
+          <img src={movie} alt="" />
         </a>
       </div>
       }
