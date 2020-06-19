@@ -5,19 +5,13 @@ import { Particles } from 'react-particles-js';
 import { Spring } from 'react-spring/renderprops';
 import { FaLinkedin, FaGithub, FaCopyright } from "react-icons/fa";
 import { GiGamepad } from "react-icons/gi";
+import { MdMailOutline } from "react-icons/md";
 import { IconContext } from "react-icons";
 import styled, { keyframes } from 'styled-components';
 import punchy from './assets/punchy.png';
 
-const StyledText = styled.p`
-  .icon {
-    filter: drop-shadow(2px 2px 4px black);
-    margin-right: 10px;
-    display: inline;
-  }
-`;
-
 const StyledImg = styled.img`
+
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -52,13 +46,57 @@ const Styles = styled.div`
 {
   color: white;
   text-shadow: 2px 2px 4px black;
-  border-style: solid;
   padding: 50px;
 }
 
 .welcomeText.right
 {
   margin-left: 20px;
+}
+
+.header
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headerH3
+{
+  display: inline;
+}
+
+.linkSpacing
+{
+  margin-bottom: 5px;
+}
+
+.linkDiv
+{
+  margin-right: 10px;
+  display: inline;
+  color: white;
+  &:hover
+  {
+    opacity: 0.8;
+  }
+}
+
+.icon
+{
+  display: inline;
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+.iconText
+{
+  display: inline;
+  margin-left: 10px;
+}
+
+.gameIcon
+{
+  filter: drop-shadow(2px 2px 4px black);
+  margin-left: 10px;
 }
 
 /* Copyright text */
@@ -74,23 +112,6 @@ const Styles = styled.div`
 .bottomText.copyRight
 {
   margin-bottom: 20px;
-}
-
-.header
-{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.headerH3
-{
-  display: inline;
-}
-
-.gameIcon
-{
-  filter: drop-shadow(2px 2px 4px black);
-  margin-left: 10px;
 }
 
 a
@@ -140,30 +161,41 @@ export const Home = () => (
           <p>
             This is my personal website. I either linked you here myself,
             or you got here via my GitHub. Either way, you can learn more about
-            me by reading the section to the right, or look at my blog or
+            me by reading the section to the right, or by looking at my blog or
             projects page. <br/><br/> Here are some handy links if you want to
-            view my LinkedIn or my projects directly on Github!
+            email me, view my LinkedIn, or check out my projects directly on
+            Github!
           </p>
-          <a href="https://www.linkedin.com/in/wesley-kok/">
-            <StyledText>
-              <p className="icon">
+          <div className="linkSpacing">
+            <a href="mailto:wesleykok@hotmail.com">
+              <div className="linkDiv">
                 <IconContext.Provider value={{ size: '1.5em' }}>
-                  <FaLinkedin />
+                  <div className="icon"><MdMailOutline /></div>
                 </IconContext.Provider>
-              </p>
-              LinkedIn
-            </StyledText>
-          </a>
-          <a href="https://github.com/WKhiro">
-            <StyledText>
-              <p className="icon">
+                <p className="iconText">Email</p>
+              </div>
+            </a>
+          </div>
+          <div className="linkSpacing">
+            <a href="https://www.linkedin.com/in/wesley-kok/">
+              <div className="linkDiv">
                 <IconContext.Provider value={{ size: '1.5em' }}>
-                  <FaGithub />
+                  <div className="icon"><FaLinkedin /></div>
                 </IconContext.Provider>
-              </p>
-              GitHub
-            </StyledText>
-          </a>
+                <p className="iconText">LinkedIn</p>
+              </div>
+            </a>
+          </div>
+          <div className="linkSpacing">
+            <a href="https://github.com/WKhiro">
+              <div className="linkDiv">
+                <IconContext.Provider value={{ size: '1.5em' }}>
+                  <div className="icon"><FaGithub /></div>
+                </IconContext.Provider>
+                <p className="iconText">GitHub</p>
+              </div>
+            </a>
+          </div>
           <StyledImg src={punchy} />
         </Col>
         }
@@ -224,12 +256,11 @@ export const Home = () => (
       </div>
 
       <div className="bottomText copyRight">
-        <StyledText>
+
           <IconContext.Provider value={{ size: '1.5em' }}>
             <FaCopyright className="icon"/>
           </IconContext.Provider>
           2020 Wesley Kok
-        </StyledText>
       </div>
     </Container>
   </Styles>

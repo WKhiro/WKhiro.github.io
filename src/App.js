@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './Home';
 import { Blog } from './Blog';
 import { Projects } from './Projects';
-import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { NavBar } from './components/NavBar';
@@ -18,7 +17,6 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
             <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
             <Route component={NoMatch} /> // Checks all pages we have, then goes to a 404 error page if there is no match
           </Switch>
       </Router>
