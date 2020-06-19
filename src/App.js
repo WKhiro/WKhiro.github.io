@@ -9,7 +9,7 @@ import { NavBar } from './components/NavBar';
 function App() {
   return (
     <React.Fragment>
-      <Router basename="/Personal_Website">
+      <Router>
         <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
