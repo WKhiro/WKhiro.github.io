@@ -18,3 +18,9 @@ A page that contains links to projects I've worked on previously.
 ### `Blog`
 
 A blog page that will contain random posts about coding, games, and etc.
+
+## Future Plans
+
+I want to expand upon my website a bit more in the coming future with the following features:
+- A page dedicated to League of Legends! I want to write a visually appealing guide for my favorite champion, as well as my favorite role in the game.
+- Incorporate a database of blog posts so I can readily add and delete them without needing to change my actual code. Maybe I'll use MongoDB.
