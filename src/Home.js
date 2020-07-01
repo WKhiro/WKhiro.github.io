@@ -150,12 +150,13 @@ export const Home = () => (
               engineer. Besides pursuing formal education in Computer Science
               through university courses, I began my journey into
               software development by tinkering around with technologies I found
-              interesting to me, such as ReactJS, Unity, and Android Studio.
-              I've been exposed to a lot of coding languages as well, but never
-              truly got to specialize in a select few. Currently, I'm aimming to
-              specialize more in Python, JavaScript, and HTML5/CSS3. Recently,
-              I've been searching for an entry-level software engineer position
-              whilst improving my coding proficiency in the meantime.
+              interesting to me, such as ReactJS, Unity, Unreal Engine 4, and
+              Android Studio. I've been exposed to a lot of coding languages as
+              well, but never truly got to specialize in a select few. 
+              Currently, I'm aiming to specialize more in Python, JavaScript,
+              and HTML5/CSS3. Recently, I've been searching for an entry-level
+              software engineer position whilst improving my coding proficiency
+              in the meantime.
             </p>
             <h3>Alma Mater</h3>
             <ul>
