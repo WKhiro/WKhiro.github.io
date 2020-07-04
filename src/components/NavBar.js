@@ -14,18 +14,27 @@ const Styles = styled.div`
 
 .navbar-brand, .navbar-nav .nav-link
 {
-  color: #000;
+  color: #2C81AF;
   /* horizontal-pos, vertical-pos, blur radius, color */
   /*text-shadow: 2px 2px 4px #0066CC;*/
   font-size: 50px;
   font-family: "Varela";
   margin-left: 20px;
   margin-right: 20px;
+    &.active
+    {
+      color: #3BAFED;
+    }
+    &:hover
+    {
+      color: #2C81AF;
+      opacity: 0.8;
+    }
     &::after
     {
-      display:block;
+      display: block;
       content: '';
-      border-bottom: solid 3px #00008B;
+      border-bottom: solid 3px #FFF;
       transform: scaleX(0);
       transition: transform 250ms ease-in-out;
     }
@@ -41,7 +50,7 @@ const Styles = styled.div`
   align-items: center;
   text-decoration: none;
   font-family: "Balsamiq Sans";
-  text-shadow: 2px 2px 4px #0066CC;
+  text-shadow: 2px 2px 4px blue;
 }
 
 .spacing
@@ -53,15 +62,15 @@ const Styles = styled.div`
 
 export const NavBar = () => (
   <Styles>
-    <Navbar expand="lg">
+    <Navbar expand="lg" variant="dark">
       <Navbar.Brand className="navbar-brand" href="/"><img className="spacing" src={cat} alt="" margin={25}/>WKhiro</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item><NavLink className="nav-link" activeClassName="active" exact to="/" >Home</NavLink></Nav.Item>
           <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/projects">Projects</NavLink></Nav.Item>
           <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/blog">Blog</NavLink></Nav.Item>
-          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/guides">Guides</NavLink></Nav.Item>
+          <Nav.Item><NavLink className="nav-link" activeClassName="active" to="/gaming">Gaming</NavLink></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

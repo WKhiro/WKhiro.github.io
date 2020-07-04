@@ -25,7 +25,6 @@ const Styles = styled.div`
 .welcomeText
 {
   color: white;
-  text-shadow: 2px 2px 4px black;
   padding: 50px;
 }
 
@@ -36,8 +35,8 @@ const Styles = styled.div`
 
 .header
 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .headerH3
@@ -54,7 +53,7 @@ const Styles = styled.div`
 {
   margin-right: 10px;
   display: inline;
-  color: aqua;
+  color: #70F0FF;
   &:hover
   {
     opacity: 0.8;

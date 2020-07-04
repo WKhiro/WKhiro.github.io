@@ -34,7 +34,7 @@ const ReferenceStyle = styled.div`
 
 a
 {
-  color: aqua;
+  color: #70F0FF;
   text-decoration: none;
   &:hover
   {

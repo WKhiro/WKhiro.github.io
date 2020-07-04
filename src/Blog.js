@@ -20,14 +20,12 @@ const Styles = styled.div`
 .postText
 {
   color: white;
-  text-shadow: 2px 2px 4px black;
   padding: 0px 50px 0px 50px;
 }
 
 .header
 {
   color: white;
-  text-shadow: 2px 2px 4px black;
   text-align: center;
   margin-bottom: 20px;
 }

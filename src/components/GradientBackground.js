@@ -7,8 +7,8 @@ const BackgroundStyle = styled.div`
 /* Background configuration */
 .gradient
 {
-  background: linear-gradient(rgba(250, 0, 0, 0.5), transparent), no-repeat;
-  background-color: purple; /* primary color of gradient */
+  background: no-repeat;
+  background-color: black; /* primary color of gradient */
   background-size: cover;
   position: fixed;
   width: 100%;

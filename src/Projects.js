@@ -33,21 +33,19 @@ const Styles = styled.div`
 .project.text
 {
   color: white;
-  text-shadow: 2px 2px 4px black;
   flex: 1;
   margin-right: 30px;
 }
 
-.xasd
+.descriptionText
 {
   color: white;
-  text-shadow: 2px 2px 4px black;
   padding-bottom: 50px;
 }
 
 a
 {
-  color: aqua;
+  color: #70F0FF;
   text-decoration: none;
   &:hover
   {
@@ -61,7 +59,7 @@ export const Projects = () => (
   <Styles>
     <GradientBackground />
     <Container>
-      <Container className="xasd">
+      <Container className="descriptionText">
         <h5>
           Only large projects are on showcase here. Smaller scale projects can
           be found on my <a href="https://github.com/WKhiro">GitHub</a>.

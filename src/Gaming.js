@@ -4,7 +4,8 @@ import { Spring } from 'react-spring/renderprops';
 import { GradientBackground } from './components/GradientBackground';
 import { Reference } from './components/Reference';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+import ReactPlayer from 'react-player'
 import critMath from './assets/binomialCrit.png';
 
 const Styles = styled.div`
@@ -12,7 +13,6 @@ const Styles = styled.div`
 .textHolder
 {
   color: white;
-  text-shadow: 2px 2px 4px black;
   position: relative;
 }
 
@@ -22,45 +22,73 @@ const Styles = styled.div`
   height: 64px;
 }
 
-.trying
-{
-  position: relative;
-}
-
 .mathBorder
 {
   border: 4px solid black;
 }
 
+.player
+{
+  display: inline;
+}
+
+.links
+{
+  color: #70F0FF;
+  text-decoration: none;
+  &:hover
+  {
+    opacity: 0.8;
+  }
+}
+
 `;
 
-class Guides extends React.Component {
-  constructor(props) {
-  super(props)
-
-  this.state = { hover: false, hover2: false}
-
-}
+class Gaming extends React.Component {
 
   render() {
       return (
         <Styles>
           <GradientBackground />
-          <Container className="trying">
+          <Container>
             <Container className="textHolder">
-            <div>
+            <div className="player">
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/4/46/RivenSquare.png?version=283e9a80fdf9743804abc4e16e43975c" alt=""/>
             </div>
-              <h1> Riven </h1>
+              <h1 className="player"> Riven </h1>
               <p> Welcome to a comprehensive guide on my favorite champion from League of Legends, Riven. </p>
-              <p> This guide is currently a work-in-progress </p>
+              <p> This guide is currently a work-in-progress, and a huge blob of text. </p>
+              <Link className="links" to='/gaming/#section1'>RUNES</Link> <br />
+              <Link className="links" to='/gaming/#section2'>ITEMS</Link>
               <h1> Recommended Build </h1>
-              <p> Black Cleaver, Death's Dance, Guardian Angel, Sterak's Gage, Mortal Reminder </p>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/f/f2/Black_Cleaver.png?version=d552f5b58c551a49776470eaa31e7fa9" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/1/11/Death%27s_Dance.png/180px-Death%27s_Dance.png?version=b4ba4c412de18e66e001bcf457ac8175" alt=""/>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/d/da/Guardian_Angel.png?version=b4253321f11d67ce710bdf842208dbde" alt=""/>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/21/Mercurial_Scimitar.png?version=eeec224061fee42d358d02767f27acb9" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/1/1d/Mortal_Reminder.png/180px-Mortal_Reminder.png?version=b1178a775ebc78ef5161cff6e25525bd" alt=""/>
+              <p> Black Cleaver, Death's Dance, Guardian Angel, Mercurial Scimitar, Mortal Reminder </p>
+              <p> This build will serve you well in nearly every game. If you
+              don't know what to build, just go with this build path. Feel free
+              to get Stopwatch, Quicksilver Sash, and Executioner's Calling
+              earlier if you need them. </p>
               <h1> Boots </h1>
-              <p> Ninja Tabi, Mercury's Treads, Ionian Boots of Lucidity </p>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/6/6f/Ninja_Tabi.png?version=e4c6fa32fc065da5c732b91fe0135d92" alt=""/>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/3/36/Mercury%27s_Treads.png?version=645f00a6330cedb746eb83ee3607133d" alt=""/>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/d/d3/Ionian_Boots_of_Lucidity.png?version=b4c40e71afa62e4c8b110e7337604a66" alt=""/>
+              <p> Ninja Tabi, Mercury's Treads, or Ionian Boots of Lucidity </p>
               <h1> Runes </h1>
-              <p> Conqueror, Triumph, Legend: Alacrity, Coup de Grace </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/a/a0/Rune_Conqueror.png/180px-Rune_Conqueror.png?version=3cea421710803010e0b30e48fac3ae7e" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/29/Rune_Triumph.png?version=142ca6607aae6c1022bac424f895cfd1" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/c/c8/Rune_Legend_-_Alacrity.png?version=8a071d1e024c6a9658cb873f525ec493" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/e/e5/Rune_Last_Stand.png?version=a20a2d1234a70f2b483ff0350667ac57" alt=""/>
+              <p> Conqueror, Triumph, Legend: Alacrity, Last Stand </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/b/b0/Rune_Transcendence.png?version=d1a0897f7246d8fe32c3ac3575fb48d6" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/b/b1/Rune_Gathering_Storm.png?version=01b1c65b73433a65ddc06e9545b81c78" alt=""/>
               <p> Transcendence, Gathering Storm </p>
+              <h1> Summoner Spells </h1>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/3/3a/Teleport_%28Summoner_Spell%29.png?version=e5151d0f6ce3140279ee0513742dda61" alt=""/>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/8/8e/Flash_%28Summoner_Spell%29.png?version=9c6dc20f4fe2857f0dfcf6c3c5213715" alt=""/>
+              <p> Teleport, Flash </p>
               <h1> Overview and Personal Opinion </h1>
               <p> Riven is a unique champion that heavily employs the use of animation
               cancelling in order to succeed. I personally believe that Riven will
@@ -73,7 +101,123 @@ class Guides extends React.Component {
               work many times harder than your lane opponent to achieve the same levels
               of damage, then welcome!
               </p>
-              <h1> Starting Items </h1>
+              <h1> Where is Ignite in the list of summoner spells? </h1>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/9/9e/Ignite_%28Summoner_Spell%29.png?version=d35e49a67449d3039f7fc9be3c7512cf" alt=""/>
+              <p> I do not recommend taking Ignite over Teleport on Riven.
+              Teleport's usefulness is invaluable, and you can pick up kills
+              on Riven without Ignite. If you don't have teleport and your
+              lane opponent does, they will be able to teleport back to lane and
+              force you to lose minions to tower, while you're forced to walk
+              back to lane. Teleport also acts as a safety crutch in the case
+              that you make a mistake early on, and need to recall for health.
+              Furthermore, it opens up the opportunity for teleport ganks bottom
+              lane. Take Teleport. </p>
+              <h1 id={"section1"}> Runes </h1>
+              <h5> Situational Rune Selections describe scenarios where I believe
+              that you could potentially choose one rune over the other. If I don't
+              talk about a particular rune in this section, it is non negotiable
+              and objectively the best selection. </h5>
+              <h3> Main Tree Options </h3>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/9/93/Rune_Precision.png?version=23d57e52a1547330259c1a750d082c24" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/0/07/Rune_Sorcery.png?version=56cf246d06d4a6aaea4d7d5afd9d7595" alt=""/>
+              <p> Precision is pretty much your only option for your main tree
+              as Riven. Conqueror is objectively the best keystone on her. The
+              only time I would ever see Riven going another primary tree would
+              be against Tryndamere. In this one specific matchup, taking the
+              Sorcery tree into the Phase Rush keystone would be beneficial,
+              as it would allow you to actually run away from the raging
+              swordsman after a quick trade.
+              </p>
+              <h5> Situational Rune Selections </h5>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/c/c8/Rune_Legend_-_Alacrity.png?version=8a071d1e024c6a9658cb873f525ec493" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/21/Rune_Legend_-_Tenacity.png?version=bc4d9590903f07777344eace93b7ed15" alt=""/>
+              <p> Either go Legend: Alacrity or Legend: Tenacity. Legend: Bloodline
+              is not as good as the other two options. At max stacks, they grant
+              18% attack speed, 30% tenacity, and 12% lifesteal respectively. I
+              personally like to take Legend: Alacrity, as the extra attack speed
+              makes Broken Wings (Q) combos feel much smoother. Legend: Tenacity
+              is perfectly fine to take if you see a lot of crowd-control on the
+              enemy team. </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/e/e5/Rune_Last_Stand.png?version=a20a2d1234a70f2b483ff0350667ac57" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/9/91/Rune_Coup_de_Grace.png?version=1868fd0d7b6c1dbf6c6137383ea1d2a9" alt=""/>
+              <p> Last Stand and Coup de Grace are your two choices here. I used
+              to only take Coup de Grace, but after it was nerfed multiple times,
+              Last Stand has slowly overtaken it as the better option in most
+              matchups. Take Coup de Grace if you are against someone squishy,
+              or are going a more glass-cannon oriented build on Riven. Otherwise,
+              take Last Stand, as you will constantly be hurt or bleeding to death
+              from Death's Dance.
+              </p>
+              <h3> Secondary Tree Options </h3>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/0/07/Rune_Sorcery.png?version=56cf246d06d4a6aaea4d7d5afd9d7595" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/2c/Rune_Inspiration.png?version=b7f43ad1117120967b21abb560d3cd5c" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/9/97/Rune_Resolve.png?version=6b2298c1750a54de782c7bb4b09a79de" alt=""/>
+              <p> You have three options here actually; Sorcery, Inspiration, or
+              Resolve. I personally like to take Sorcery my secondary tree, as
+              it allows you to get Transcendence and Gathering Storm. This setup
+              grants you 10% CDR for free after reaching level 10 (allowing you
+              to reach 40% CDR perfectly with Black Cleaver and Death's Dance),
+              provides from compensation for any extra CDR you get over the cap,
+              and allows you to scale harder into the later stages of the game.
+              I typically like to play safely as Riven early on until I hit my
+              level 3 or 6 power spike; if you like to trade a lot earlier on,
+              Inspiration is optimal. I just don't like the other runes you have
+              to choose from besides the obvious Cosmic Insight.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/d/d2/Rune_Bone_Plating.png?version=b203e07cfa4277b2b6f2a3ff7483bb31" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/b/b9/Rune_Mirror_Shell.png?version=e541d0f93c7090900b3111fdbcbf57e8" alt=""/>
+              <p> As for Resolve, the only reason why you would take this tree is
+              due to one rune: Bone Plating. This rune is overpowered.
+              Being able to mitigate 30-60 damage (based on level) from 3
+              attacks or abilities from your opponent is insane early game, and
+              provides you with much needed survivability. You can easily win
+              duels early on if you take Resolve. Take Shield Bash for your
+              other rune, as it gives you a nice autoattack buff every time you
+              use Valor (E). The only downside to taking this tree is the
+              lack of CDR. Otherwise, it's a stellar secondary tree for Riven.
+              </p>
+              <h5> Situational Rune Selections for Sorcery </h5>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/24/Rune_Nimbus_Cloak.png?version=fa2f22080f720c0c9ef587987b7312aa" alt=""/>
+              <p> None. However, if you're jungling as Riven for fun, take
+              Nimbus Cloak over Transcendence. You'll get the 10% CDR you
+              lost from Transcendence from your jungle item, and gain a movement
+              speed steroid every time you use Smite this way.</p>
+              <h5> Situational Rune Selections for Inspiration </h5>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/b/bf/Rune_Magical_Footwear.png?version=21bd16e69ed196b56e0ef078e113dfa9" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/c/ca/Rune_Perfect_Timing.png?version=1c0c6d12dd8fbe9f108c1df1f1d264d5" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/c/c1/Rune_Future%27s_Market.png?version=cb9e45f0f903d005e478380a16388b18" alt=""/>
+              <p> Cosmic Insight is required, and is the reason why you take this
+              tree. Your only choices for your last rune would be between Magical
+              Footwear, Perfect Timing, and Future's Market. I would personally
+              choose Magical Footwear over the other two; Perfect Timing takes
+              up a precious item slot, and Future's Market literally puts you
+              in debt. Magical Footwear is not without its cons either, as it
+              restricts you from rushing tier 2 boots in tough matchups.
+              </p>
+              <h3> Offense, Flex, and Defensive Runes </h3>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/a/a3/Rune_shard_Adaptive_Force.png/revision/latest/scale-to-width-down/30?cb=20181122101607" alt=""/>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/a/a3/Rune_shard_Adaptive_Force.png/revision/latest/scale-to-width-down/30?cb=20181122101607" alt=""/>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e5/Rune_shard_Armor.png/revision/latest/scale-to-width-down/30?cb=20181122101608" alt=""/>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/1/10/Rune_shard_Magic_Resistance.png/revision/latest/scale-to-width-down/30?cb=20181122101611" alt=""/>
+              <p> In most cases, take adaptive force for both Offense and Flex,
+              and then Armor or Magic Resist for Defensive. I never take health
+              for the defensive rune, since it does nothing for you early game,
+              and needs time to scale unlike the other two options.
+              </p>
+              <h5> Situational Rune Selections for Stats </h5>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/a/a3/Rune_shard_Adaptive_Force.png/revision/latest/scale-to-width-down/30?cb=20181122101607" alt=""/>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/e/e4/Rune_shard_Attack_Speed.png/revision/latest/scale-to-width-down/30?cb=20181122101609" alt=""/>
+              <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/4/47/Rune_shard_Cooldown_Reduction.png/revision/latest/scale-to-width-down/30?cb=20181122101609" alt=""/>
+              <p> You could honestly take any of these three offensive runes for
+              Riven. I personally like taking attack speed over doubling down
+              on adaptive force. Attack speed feels great, what can I say? If
+              you go Inspiration as your secondary tree, I highly recommending
+              taking the scaling CDR rune, as it grants you 6% CDR at level 1,
+              and eventually gives you the 10% CDR you missed out on from not
+              taking the Sorcery tree.
+              </p>
+
+              <h1 id={"section2"}> Starting Items </h1>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/f/fd/Long_Sword.png?version=b7a1ced04adab1c3090388d76744e7d0" alt=""/>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/a/af/Refillable_Potion.png?version=bfaf651603d56834c38401026016e0d0" alt=""/>
               <p> I usually start Long Sword and Refillable Potion instead of 3 potions
@@ -105,7 +249,7 @@ class Guides extends React.Component {
               Tabi. Don't expect to get any early kills if you start this.
               </p>
               <h1> Boots </h1>
-              <h5> Do not get any other boots other than these three on Riven. </h5>
+              <h5> Do not get any boots other than these three on Riven. </h5>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/6/6f/Ninja_Tabi.png?version=e4c6fa32fc065da5c732b91fe0135d92" alt=""/>
               <p> Ninja Tabi is broken in my opinion; it reduces damage from
               all basic attacks by 12%, which will instantly make you a lot tankier
@@ -160,14 +304,15 @@ class Guides extends React.Component {
               also the ability to critically strike enemies 25% of the time. 25% critical
               chance might not seem very high on paper, but if you recognize that Riven
               can quickly get 3 autoattacks off per Broken Wings (Q) combo, you'll see
-              that the chance of Riven getting at least one critical strike off in a
-              combo is a whopping 57.8125%! Unfortunately, the mana restoration passive
-              is wasted, but this can be overlooked pretty easily. Feel free to try this against
-              squishy champions like Kayle; you'll absolutely destroy them. However,
-              never go this build against tanks unless you're able to wrap up the
-              game early. This item does not scale well on Riven at all. You also
-              explode like a firework if you rush this item. Don't say I didn't warn
-              you. </p>
+              that the chance of Riven getting at least one critical strike off per
+              combo is a whopping 58%! In addition, her passive can crit, leading
+              to huge burst damage if you're lucky enough. Unfortunately,
+              the mana restoration passive is wasted, but this can be overlooked
+              pretty easily. Feel free to try this against squishy champions like
+              Kayle; you'll absolutely destroy them. However, never go this build
+              against tanks unless you're able to wrap up the game early, or are
+              confident in your ability to push an advantage. You also explode
+              like a firework if you rush this item. Don't say I didn't warn you. </p>
               <p> Chance of at least 1 critical strike from 3 autoattacks (Binomial Distribution) </p>
               <img className="mathBorder" src={critMath} alt="" />
               <h2> Death's Dance </h2>
@@ -252,4 +397,4 @@ class Guides extends React.Component {
     }
   }
 
-export default Guides;
+export default Gaming;
