@@ -54,7 +54,7 @@ const Styles = styled.div`
 {
   margin-right: 10px;
   display: inline;
-  color: white;
+  color: aqua;
   &:hover
   {
     opacity: 0.8;
@@ -152,7 +152,7 @@ export const Home = () => (
               software development by tinkering around with technologies I found
               interesting to me, such as ReactJS, Unity, Unreal Engine 4, and
               Android Studio. I've been exposed to a lot of coding languages as
-              well, but never truly got to specialize in a select few. 
+              well, but never truly got to specialize in a select few.
               Currently, I'm aiming to specialize more in Python, JavaScript,
               and HTML5/CSS3. Recently, I've been searching for an entry-level
               software engineer position whilst improving my coding proficiency

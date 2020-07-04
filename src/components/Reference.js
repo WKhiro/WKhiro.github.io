@@ -36,6 +36,10 @@ a
 {
   color: aqua;
   text-decoration: none;
+  &:hover
+  {
+    opacity: 0.8;
+  }
 }
 
 `;

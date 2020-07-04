@@ -38,12 +38,35 @@ const Styles = styled.div`
   margin-right: 30px;
 }
 
+.xasd
+{
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  padding-bottom: 50px;
+}
+
+a
+{
+  color: aqua;
+  text-decoration: none;
+  &:hover
+  {
+    opacity: 0.8;
+  }
+}
+
 `;
 
 export const Projects = () => (
   <Styles>
     <GradientBackground />
     <Container>
+      <Container className="xasd">
+        <h5>
+          Only large projects are on showcase here. Smaller scale projects can
+          be found on my <a href="https://github.com/WKhiro">GitHub</a>.
+        </h5>
+      </Container>
       <Container className="project">
       <Spring from={{opacity: 0}} to={{opacity: 1}}
       config={{delay: 100, duration: 1000}}>
