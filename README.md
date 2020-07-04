@@ -17,7 +17,11 @@ A page that contains links to projects I've worked on previously.
 
 ### `Blog`
 
-A blog page that will contain random posts about coding, games, and etc.
+A blog page that will contain random updates about what I'm doing. I will probably move these blog posts to a MongoDB database in the future.
+
+### `Gaming`
+
+A page that will contain guides and other cool stuff about games I like!
 
 ## Future Plans
 
