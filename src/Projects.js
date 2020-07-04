@@ -68,16 +68,12 @@ export const Projects = () => (
         </h5>
       </Container>
       <Container className="project">
-      <Spring from={{opacity: 0}} to={{opacity: 1}}
-      config={{delay: 100, duration: 1000}}>
-      {props =>
-      <div className="project image" style={props}>
+      <div className="project image">
         <a href="https://github.com/WKhiro/Statue_In_Space">
           <img src={statue} alt="" />
         </a>
       </div>
-      }
-      </Spring>
+
       <Container>
         <h1 className="project text">Statue in Space</h1>
         <h5 className="project text">2019</h5>
@@ -89,16 +85,12 @@ export const Projects = () => (
       </Container>
 
       <Container className="project">
-      <Spring from={{opacity: 0}} to={{opacity: 1}}
-      config={{delay: 500, duration: 1000}}>
-      {props =>
-      <div className="project image" style={props}>
+      <div className="project image">
         <a href="https://wkhiro.itch.io/wyvern">
           <img src={wyvern} alt="" />
         </a>
       </div>
-      }
-      </Spring>
+
       <Container>
         <h1 className="project text">Wyvern's Wrath</h1>
         <h5 className="project text">2018</h5>
@@ -112,16 +104,12 @@ export const Projects = () => (
       </Container>
 
       <Container className="project">
-      <Spring from={{opacity: 0}} to={{opacity: 1}}
-      config={{delay: 900, duration: 1000}}>
-      {props =>
-      <div className="project image" style={props}>
+      <div className="project image" >
         <a href="http://project-cinescope.s3-website-us-west-2.amazonaws.com/">
           <img src={movie} alt="" />
         </a>
       </div>
-      }
-      </Spring>
+
       <Container>
         <h1 className="project text">Cinescope</h1>
         <h5 className="project text">2018</h5>

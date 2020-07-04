@@ -38,10 +38,24 @@ export const Blog = () => (
   <Styles>
     <GradientBackground />
     <Container>
-      <Spring from={{opacity: 0}} to={{opacity: 1}}
-      config={{delay: 100, duration: 1000}}>
-      {props =>
-      <Container className="squeeze" style={props}>
+      <Container className="squeeze">
+        <h1 className="header">Work in Progress Guide!</h1>
+        <p className="postText">
+          Starting to create a League of Legends guide now, and it's going fairly
+          well! I need to start manipulating states for this page however, so it's
+          going to be harder to code than my initial website pages. The things
+          that I do to make things look nice. I need to add in a table of contents
+          box to allow users to jump between sections, and maybe a jump-to-the-top
+          button somewhere since the guide is getting fairly long. I'm focusing
+          on getting everything written down first, and then I'll work on UX,
+          followed by polishing the UI.
+        </p>
+        <p className="postText">
+          7/3/2020
+        </p>
+      </Container>
+
+      <Container className="squeeze">
         <h1 className="header">Fighting with GitHub Pages</h1>
         <p className="postText">
           I thought that deploying my personal website through GitHub Pages
@@ -59,13 +73,8 @@ export const Blog = () => (
           6/19/2020
         </p>
       </Container>
-      }
-      </Spring>
 
-      <Spring from={{opacity: 0}} to={{opacity: 1}}
-      config={{delay: 500, duration: 1000}}>
-      {props =>
-      <Container className="squeeze" style={props}>
+      <Container className="squeeze">
         <h1 className="header">First Post!</h1>
         <p className="postText">
           Honestly, I'm not sure what to really put here at the moment, but
@@ -76,8 +85,6 @@ export const Blog = () => (
           6/18/2020
         </p>
       </Container>
-      }
-      </Spring>
       <Reference />
     </Container>
   </Styles>

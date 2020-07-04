@@ -91,10 +91,7 @@ export const Home = () => (
     <GradientBackground />
     <Container>
       <Row top="xs">
-        <Spring from={{opacity: 0}} to={{opacity: 1}}
-        config={{delay: 100, duration: 1000}}>
-        {props =>
-        <Col xs className="welcomeText" style={props}>
+        <Col xs className="welcomeText">
           <h1 className="header">Welcome!</h1>
           <p>
             This is my personal website. I either linked you here myself,
@@ -136,13 +133,8 @@ export const Home = () => (
           </div>
           <StyledImg src={punchy} />
         </Col>
-        }
-        </Spring>
 
-        <Spring from={{opacity: 0}} to={{opacity: 1}}
-        config={{delay: 500, duration: 1000}}>
-        {props =>
-        <Col xs className="welcomeText right" style={props}>
+        <Col xs className="welcomeText right">
           <h1 className="header"> About Me </h1>
             <h3>Who Am I?</h3>
             <p>
@@ -187,8 +179,6 @@ export const Home = () => (
               and Nintendo games. I adore cats as well.
             </p>
         </Col>
-        }
-        </Spring>
       </Row>
       <Reference />
     </Container>
