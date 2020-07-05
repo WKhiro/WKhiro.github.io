@@ -27,8 +27,7 @@ const Styles = styled.div`
     }
     &:hover
     {
-      color: #2C81AF;
-      opacity: 0.8;
+      color: #3BAFED;
     }
     &::after
     {

@@ -36,6 +36,9 @@ const Styles = styled.div`
 {
   color: #70F0FF;
   text-decoration: none;
+  display: inline;
+  padding-right: 20px;
+  font-size: 32px;
   &:hover
   {
     opacity: 0.8;
@@ -58,7 +61,7 @@ class Gaming extends React.Component {
               <h1 className="player"> Riven </h1>
               <p> Welcome to a comprehensive guide on my favorite champion from League of Legends, Riven. </p>
               <p> This guide is currently a work-in-progress, and a huge blob of text. </p>
-              <Link className="links" to='/gaming/#section1'>RUNES</Link> <br />
+              <Link className="links" to='/gaming/#section1'>RUNES</Link>
               <Link className="links" to='/gaming/#section2'>ITEMS</Link>
               <h1> Recommended Build </h1>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/f/f2/Black_Cleaver.png?version=d552f5b58c551a49776470eaa31e7fa9" alt=""/>
@@ -101,7 +104,7 @@ class Gaming extends React.Component {
               work many times harder than your lane opponent to achieve the same levels
               of damage, then welcome!
               </p>
-              <h1> Where is Ignite in the list of summoner spells? </h1>
+              <h1> Ignite: An Inferior Summoner Spell </h1>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/9/9e/Ignite_%28Summoner_Spell%29.png?version=d35e49a67449d3039f7fc9be3c7512cf" alt=""/>
               <p> I do not recommend taking Ignite over Teleport on Riven.
               Teleport's usefulness is invaluable, and you can pick up kills
@@ -119,7 +122,9 @@ class Gaming extends React.Component {
               and objectively the best selection. </h5>
               <h3> Main Tree Options </h3>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/9/93/Rune_Precision.png?version=23d57e52a1547330259c1a750d082c24" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/a/a0/Rune_Conqueror.png/180px-Rune_Conqueror.png?version=3cea421710803010e0b30e48fac3ae7e" alt=""/>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/0/07/Rune_Sorcery.png?version=56cf246d06d4a6aaea4d7d5afd9d7595" alt=""/>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/0/06/Rune_Phase_Rush.png?version=330aa06a694a709509815b70eaf25224" alt=""/>
               <p> Precision is pretty much your only option for your main tree
               as Riven. Conqueror is objectively the best keystone on her. The
               only time I would ever see Riven going another primary tree would
@@ -128,7 +133,7 @@ class Gaming extends React.Component {
               as it would allow you to actually run away from the raging
               swordsman after a quick trade.
               </p>
-              <h5> Situational Rune Selections </h5>
+              <h5> Situational Rune Selections for Precision </h5>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/c/c8/Rune_Legend_-_Alacrity.png?version=8a071d1e024c6a9658cb873f525ec493" alt=""/>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/21/Rune_Legend_-_Tenacity.png?version=bc4d9590903f07777344eace93b7ed15" alt=""/>
               <p> Either go Legend: Alacrity or Legend: Tenacity. Legend: Bloodline
@@ -347,7 +352,7 @@ class Gaming extends React.Component {
               Just remember that it revives you with 50% of your BASE health, so you
               will probably come back to life with about 30% of your TOTAL health in
               most cases. If you have Spirit Visage built for some reason, you'll
-              restore up to 65% BASE health instead. Also don't use Quicksilver Sash
+              restore up to 65% BASE health instead. Also, don't use Quicksilver Sash
               while you are reviving. Yes, you can use it while in stasis, and yes,
               you'll waste it like a clown. </p>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/a/a5/Sterak%27s_Gage.png?version=658731989646c2fbf86d039b6cb3b271" alt=""/>
@@ -373,6 +378,10 @@ class Gaming extends React.Component {
               lots of self-sustain these days (Dr. Mundo, Volibear), making Mortal
               Reminder better against them.
               </p>
+              <p> Unfortunately, these two items stack poorly with Black Cleaver's
+              armor shredding capabilities. I haven't run the exact numbers myself,
+              but it would be wise to sit on Last Whisper or Executioner's Calling
+              for awhile if the enemy team is not stacking excessive amounts of armor. </p>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/21/Mercurial_Scimitar.png?version=eeec224061fee42d358d02767f27acb9" alt=""/>
               <p> Mercurial Scimitar needs no explanation. If the enemy team has a lot
               of crowd-control abilities, build Quicksilver Sash, and finish this

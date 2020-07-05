@@ -36,6 +36,20 @@ export const Blog = () => (
   <Styles>
     <GradientBackground />
     <Container>
+    <Container className="squeeze">
+      <h1 className="header">Gatsby...?</h1>
+      <p className="postText">
+        I've recently stumbled across Gatsby, and noticed that it grants a lot
+        of modern features that I would be excited to utilize. Most importantly,
+        Gatsby would allow me to create a blisteringly fast website. I might
+        leave the development of my personal website on hiatus, and go hit the
+        books for a while to learn me some technologies required for Gatsby...
+      </p>
+      <p className="postText">
+        7/4/2020
+      </p>
+    </Container>
+
       <Container className="squeeze">
         <h1 className="header">Work in Progress Guide!</h1>
         <p className="postText">
