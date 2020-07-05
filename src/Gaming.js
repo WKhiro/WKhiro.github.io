@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
 import ReactPlayer from 'react-player'
 import critMath from './assets/binomialCrit.png';
+import top from './assets/topChampions.png';
+import bot from './assets/bottomChampions.png';
 
 const Styles = styled.div`
 
@@ -45,6 +47,16 @@ const Styles = styled.div`
   }
 }
 
+.padImages
+{
+  padding-bottom: 20px;
+}
+
+.leaderDiv
+{
+  display: inline-block;
+}
+
 `;
 
 class Gaming extends React.Component {
@@ -61,14 +73,18 @@ class Gaming extends React.Component {
               <h1 className="player"> Riven </h1>
               <p> Welcome to a comprehensive guide on my favorite champion from League of Legends, Riven. </p>
               <p> This guide is currently a work-in-progress, and a huge blob of text. </p>
+              <h1> Table of Contents </h1>
               <Link className="links" to='/gaming/#section1'>RUNES</Link>
               <Link className="links" to='/gaming/#section2'>ITEMS</Link>
+              <Link className="links" to='/gaming/#section3'>META</Link>
               <h1> Recommended Build </h1>
+              <div className="padImages">
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/f/f2/Black_Cleaver.png?version=d552f5b58c551a49776470eaa31e7fa9" alt=""/>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/1/11/Death%27s_Dance.png/180px-Death%27s_Dance.png?version=b4ba4c412de18e66e001bcf457ac8175" alt=""/>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/d/da/Guardian_Angel.png?version=b4253321f11d67ce710bdf842208dbde" alt=""/>
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/2/21/Mercurial_Scimitar.png?version=eeec224061fee42d358d02767f27acb9" alt=""/>
               <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/1/1d/Mortal_Reminder.png/180px-Mortal_Reminder.png?version=b1178a775ebc78ef5161cff6e25525bd" alt=""/>
+              </div>
               <p> Black Cleaver, Death's Dance, Guardian Angel, Mercurial Scimitar, Mortal Reminder </p>
               <p> This build will serve you well in nearly every game. If you
               don't know what to build, just go with this build path. Feel free
@@ -399,6 +415,127 @@ class Gaming extends React.Component {
               Death's Dance, but it'll be worthwhile, especially if you have the
               Transcendence rune. Get this item and Death's Dance, and you'll destroy
               all AP top laners. And yes, spell vamp works on your abilities. </p>
+              <h1 id={"section3"}> Riven in the Current Meta </h1>
+              <p> Riven is not good right now. Allow me to explain, starting with a
+              simple visual from the ever popular OP.GG website. </p>
+              <div className="leaderDiv">
+              <img className="leaderBoards" src={top} alt="" />
+              </div>
+              <div className="leaderDiv">
+              <img className="leaderBoards2" src={bot} alt="" />
+              </div>
+              <p> Riven is currently 4th from the bottom in terms of top laners.
+              How did this happen? What is the difference between her and the
+              top tier champions? </p>
+              <h3> Blade of the Ruined King (BoRK) </h3>
+              <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/5/57/Blade_of_the_Ruined_King.png?version=7b26b3a3608f32689e0ab7f9640998bd" alt=""/>
+              <p> A large majority of the best top laners right now can build
+              this item. This item makes autoattacks deal 12% of the target's
+              current health as bonus physical damage, which is absolutely nuts.
+              Basically, any champion that can effectively utilize this item can
+              make tanks disappear. Champions that can autoattack very quickly
+              can melt anyone in the game with this item, especially if they
+              deal true damage (health is the only counter to true damage,
+              which this item shreds).
+              </p>
+              <p> In addition, the active is very useful for chasing down
+              opponents. It slows the enemy by 25%, and speeds you up by 25%
+              for 3 whole seconds. I've seen plenty of champions use this item
+              to initiate a fight.
+              </p>
+              <h3> Why not just build BoRK on Riven? </h3>
+              <p> You could, but why? Riven is an AD caster, which means that
+              a large majority of her damage comes from abilities, rather than
+              pure autoattacks. As a result, she is not good at abusing the
+              12% on-hit bonus this item gives. If you want to abuse BoRK, you
+              would play a champion with high attack speed instead, like Jax or Irelia.
+              </p>
+              <p> In addition, you would explode if you built this item
+              first on Riven, as BoRK grants no health or CDR, and only grants
+              lifesteal on autoattacks. 12% lifesteal on autoattacks, and a shield (E)
+              you can only use every 14 seconds is not going to keep you alive.
+              </p>
+              <h3> Riven Versus the Top </h3>
+              <p> So, how does Riven fare against the top 11 top laners in the
+              game right now? Here's a quick rundown about what makes each of
+              these champions strong, and if Riven is at a disadvantage (Note:
+              being at a disadvantage does not mean Riven can not win against
+              these champions in lane):
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/6/6d/WukongSquare.png?version=5e4ee8ccfeffd3884d82c9f046efd53f" alt=""/>
+              <p> Can build BoRK. Stacking armor and health regen from passive,
+              nigh permanent armor shred, and two knock-ups from this ultimate.
+              This champion is simply broken right now. Riven is at a
+              disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/5/54/DariusSquare.png?version=85b8f660b8095781604324278d5b04f5" alt=""/>
+              <p> Can run the Ghost summoner spell alongside Nimbus Cloak.
+              Built-in passive armor penetration from his Apprehend (E) that
+              scales from 15% - 35%. Has an autoattack reset that slows for 90%
+              for 1 second, and refunds its mana cost and 50% of its cooldown on
+              minion last hits. His passive makes you literally bleed to death.
+              There is a common misconception that Riven can never be caught
+              thanks to her seemingly limitless dashes. This guy exists to
+              prove that theory wrong. Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/f/f9/VolibearSquare.png?version=71e6a415bfad9de8e11f8286be493d01" alt=""/>
+              <p> Riot's newest reworked champion. Broken. Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/7/7c/QuinnSquare.png?version=ecb75b1ace6217309f34db8b7ff70857" alt=""/>
+              <p> Can build BoRK. Ranged with a blind and knock-back. Riven will
+              never be able to land a hit on a skilled Quinn player. Riven is
+              at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/6/64/MaokaiSquare.png?version=07f8dd2ca07b069155826955596f0568" alt=""/>
+              <p> Maokai has always been decent, and hasn't been nerfed in recent
+              times. Buffs to Bami's Cinder and Sunfire Cape has made him a menace
+              top lane with those exploding flame novas. His passive is an
+              UNSTOPPABLE healing autoattack with a cooldown (30/25/20 seconds based
+              on level). However, the cooldown is lowered by 4 seconds every
+              time Maokai casts an ability, or is struck by an ability. You can
+              probably guess how this would be good against Riven. Has a spammable
+              slow/knock-back, and becomes untargetable during his dash. If he
+              rushes Bramble Vest, you pretty much lose. Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/e/ea/GarenSquare.png?version=17b122cf743b1ec93dfbce2f8828c08e" alt=""/>
+              <p> Garen can stack Conqueror extremely quickly with his spin,
+              and has a silence. If he times Courage (W) correctly, he'll instantly
+              break out of any quick trades you attempt on him with your stun, and
+              punish you. Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/d/d2/FioraSquare.png?version=a0fe28ee06f3a53ed9a1e5eb9a9a2364" alt=""/>
+              <p> Can build BoRK. Used to be a skill matchup, but recent buffs to
+              Fiora have heavily shifted this matchup in her favor. Her ultimate
+              grants her movement speed the moment it is cast, and vitals can
+              be proc'd using BoRK's active. If she ever hits you with Riposte
+              (slow or stun), you will lose the trade. The slow is just as good as
+              the stun, as it reduces movement speed AND your attack speed by 50%.
+              Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/1/13/CamilleSquare.png?version=27eaf42bcf0406577a5f792b0631b971" alt=""/>
+              <p> Camille is what you wish you could be right now. Another animation
+              cancelling AD caster that hasn't been gutted. She can dodge your
+              ultimate with her own. Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/0/0f/JaxSquare.png?version=20cc0e4f3272cef1ce908fedb3ba016b" alt=""/>
+              <p> Can build BoRK. Can easily run you down, and has a dodge mechanic
+              that allows him to stun you. His ultimate makes him extremely tanky.
+              He scales like an absolute monster. Riven is at a disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/f/fc/RenektonSquare.png?version=6608f6b07c800e22dce3fbe7b77c78f5" alt=""/>
+              <p> Can build BoRK. If there was a cookie cutter counter to Riven,
+              it would be this guy right here. He absolutely destroys you.
+              His empowered stun negates your shield before he strikes you.
+              Riven is at a huge disadvantage.
+              </p>
+              <img className="imgScale" src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/7/75/VladimirSquare.png?version=f20cef89030a416dfc44e096f8f6f033" alt=""/>
+              <p> You actually destroy this blood sucker in lane, especially
+              if you rush Executioner's Calling. So why this guy is top tier?
+              The reason is due to his unstoppable late game power. He can
+              infinitely sustain himself in lane, is extremely safe, and will
+              eventually turn into a 1v5 monster. Riven is at an advantage,
+              but needs to wrap up the game as soon as possible.
+              </p>
             </Container>
           </Container>
         </Styles>
