@@ -1,58 +1,31 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import { Spring } from 'react-spring/renderprops';
-import { GradientBackground } from './components/GradientBackground';
-import { Reference } from './components/Reference';
-import styled from 'styled-components';
-import statue from './assets/statue.png';
-import wyvern from './assets/wyvern.png';
-import movie from './assets/movie.png';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import { GradientBackground } from "./components/GradientBackground";
+import { Reference } from "./components/Reference";
+import styled from "styled-components";
+import statue from "./assets/statue.png";
+import wyvern from "./assets/wyvern.png";
+import movie from "./assets/movie.png";
+import ProjectItem from "./components/ProjectItem";
+import Sandbox from "./components/Sandbox";
 
 const Styles = styled.div`
-
-.project
-{
-  display: inline-flex;
-}
-
-/*
-  mins: prevent web page repositioning during animation
-  maxs: prevent elongated column height when reducing page size
-*/
-.project.image
-{
-    min-width: 202px;
-    min-height: 321px;
-    max-height: 321px;
-    border: 3px solid white;
-    box-shadow: 2px 2px 4px black;
-    margin-bottom: 10px;
-    margin-right: 50px;
-}
-
-.project.text
-{
-  color: white;
-  flex: 1;
-  margin-right: 30px;
-}
-
-.descriptionText
-{
-  color: white;
-  padding-bottom: 50px;
-}
-
-a
-{
-  color: #70F0FF;
-  text-decoration: none;
-  &:hover
-  {
-    opacity: 0.8;
+  .descriptionText {
+    color: white;
+    padding-bottom: 50px;
   }
-}
 
+  a {
+    color: #70f0ff;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .shift {
+    padding-bottom: 40px;
+  }
 `;
 
 export const Projects = () => (
@@ -60,66 +33,58 @@ export const Projects = () => (
     <GradientBackground />
     <Container>
       <Container className="descriptionText">
-        <h5>
-          Only large projects are on showcase here. Smaller scale projects can
-          be found on my <a href="https://github.com/WKhiro">GitHub</a>.
+        <h5 className="shift">
+          Only larger projects are on showcase here. I have multiple smaller
+          scale projects on my
+          <a href="https://github.com/WKhiro"> GitHub</a>.
         </h5>
+        <h4>Other Applications (Sandbox)</h4>
+        <Sandbox
+          link="https://github.com/WKhiro/Gatsby/"
+          title="Gatsby"
+          text="Work-in-progress Gatsby web app. (Gatsby is a React-based, GraphQL
+            powered, static site generator)"
+        ></Sandbox>
+        <Sandbox
+          link="https://wkhiro.github.io/Cat_Crossing_API/"
+          title="Animal Crossing"
+          text="Animal Crossing web app for learning how to connect to an API. Only
+        features the cat villagers. (No React, pure HTML/CSS/Javascript)"
+        ></Sandbox>
+        <Sandbox
+          link="https://github.com/WKhiro/Riot_API_Winrates"
+          title="Riot Games Win Rates"
+          text="Python script that pulls in data from the Riot Games API to generate win rates."
+        ></Sandbox>
       </Container>
-      <Container className="project">
-      <div className="project image">
-        <a href="https://github.com/WKhiro/Statue_In_Space">
-          <img src={statue} alt="" />
-        </a>
-      </div>
-
-      <Container>
-        <h1 className="project text">Statue in Space</h1>
-        <h5 className="project text">2019</h5>
-        <p className="project text">
-          An OpenGL project showcasing the implementation of a variety of
-          computer graphics features, such as shadow mapping and bloom.
-        </p>
-      </Container>
-      </Container>
-
-      <Container className="project">
-      <div className="project image">
-        <a href="https://wkhiro.itch.io/wyvern">
-          <img src={wyvern} alt="" />
-        </a>
-      </div>
-
-      <Container>
-        <h1 className="project text">Wyvern's Wrath</h1>
-        <h5 className="project text">2018</h5>
-        <p className="project text">
-          A mobile game application written in JavaScript
-          utilizing the Phaser framework. It was then ported over to Android
-          Studio using Apache Cordova, allowing it to run in browser and on
-          mobile devices!
-        </p>
-      </Container>
-      </Container>
-
-      <Container className="project">
-      <div className="project image" >
-        <a href="http://project-cinescope.s3-website-us-west-2.amazonaws.com/">
-          <img src={movie} alt="" />
-        </a>
-      </div>
-
-      <Container>
-        <h1 className="project text">Cinescope</h1>
-        <h5 className="project text">2018</h5>
-        <p className="project text">
-          A web application also written in ReactJS. Aggregates movie ratings
-          and reviews across multiple popular movie database sites for ease of
-          viewing and comparison. Features user account creation with the usage
-          of Firebase authentication.
-        </p>
-      </Container>
-      </Container>
+      <ProjectItem
+        imgLink="https://github.com/WKhiro/Statue_In_Space"
+        imgSrc={statue}
+        title="Statue in Space"
+        year="2019"
+        description="An OpenGL project showcasing the implementation of a variety of
+      computer graphics features, such as shadow mapping and bloom."
+      ></ProjectItem>
+      <ProjectItem
+        imgLink="https://wkhiro.itch.io/wyvern"
+        imgSrc={wyvern}
+        title="Wyvern's Wrath"
+        year="2018"
+        description="A mobile game application written in JavaScript utilizing the Phaser
+        framework. It was then ported over to Android Studio using Apache
+        Cordova, allowing it to run in browser and on mobile devices!"
+      ></ProjectItem>
+      <ProjectItem
+        imgLink="http://project-cinescope.s3-website-us-west-2.amazonaws.com/"
+        imgSrc={movie}
+        title="Cinescope"
+        year="2018"
+        description="A web application also written in ReactJS. Aggregates movie ratings
+        and reviews across multiple popular movie database sites for ease of
+        viewing and comparison. Features user account creation with the
+        usage of Firebase authentication."
+      ></ProjectItem>
       <Reference />
     </Container>
   </Styles>
-)
+);

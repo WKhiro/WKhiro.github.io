@@ -1,11 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import { Spring } from 'react-spring/renderprops';
 import { GradientBackground } from './components/GradientBackground';
-import { Reference } from './components/Reference';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
-import ReactPlayer from 'react-player'
 import critMath from './assets/binomialCrit.png';
 import top from './assets/topChampions.png';
 import bot from './assets/bottomChampions.png';
@@ -32,6 +29,12 @@ const Styles = styled.div`
 .player
 {
   display: inline;
+}
+
+.moveDown
+{
+  display: inline;
+  padding: 20px;
 }
 
 .links
@@ -70,7 +73,7 @@ class Gaming extends React.Component {
             <div className="player">
               <img src="https://gamepedia.cursecdn.com/lolesports_gamepedia_en/4/46/RivenSquare.png?version=283e9a80fdf9743804abc4e16e43975c" alt=""/>
             </div>
-              <h1 className="player"> Riven </h1>
+              <h1 className="moveDown"> Riven </h1>
               <p> Welcome to a comprehensive guide on my favorite champion from League of Legends, Riven. </p>
               <p> This guide is currently a work-in-progress, and a huge blob of text. </p>
               <h1> Table of Contents </h1>
