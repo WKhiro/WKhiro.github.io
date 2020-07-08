@@ -9,6 +9,7 @@ import { GradientBackground } from "./components/GradientBackground";
 import { Reference } from "./components/Reference";
 import styled from "styled-components";
 import punchy from "./assets/punchy.png";
+import HomeLinks from "./components/HomeLinks";
 
 const StyledImg = styled.img`
   display: block;
@@ -37,29 +38,6 @@ const Styles = styled.div`
     display: inline;
   }
 
-  .linkSpacing {
-    margin-bottom: 5px;
-  }
-
-  .linkDiv {
-    margin-right: 10px;
-    display: inline;
-    color: #70f0ff;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  .icon {
-    display: inline;
-    filter: drop-shadow(2px 2px 4px black);
-  }
-
-  .iconText {
-    display: inline;
-    margin-left: 10px;
-  }
-
   .gameIcon {
     filter: drop-shadow(2px 2px 4px black);
     margin-left: 10px;
@@ -85,42 +63,21 @@ export const Home = () => (
             <br /> Here are some handy links if you want to email me, view my
             LinkedIn, or check out my projects directly on Github!
           </p>
-          <div className="linkSpacing">
-            <a href="mailto:wesleykok@hotmail.com">
-              <div className="linkDiv">
-                <IconContext.Provider value={{ size: "1.5em" }}>
-                  <div className="icon">
-                    <MdMailOutline />
-                  </div>
-                </IconContext.Provider>
-                <p className="iconText">Email</p>
-              </div>
-            </a>
-          </div>
-          <div className="linkSpacing">
-            <a href="https://www.linkedin.com/in/wesley-kok/">
-              <div className="linkDiv">
-                <IconContext.Provider value={{ size: "1.5em" }}>
-                  <div className="icon">
-                    <FaLinkedin />
-                  </div>
-                </IconContext.Provider>
-                <p className="iconText">LinkedIn</p>
-              </div>
-            </a>
-          </div>
-          <div className="linkSpacing">
-            <a href="https://github.com/WKhiro">
-              <div className="linkDiv">
-                <IconContext.Provider value={{ size: "1.5em" }}>
-                  <div className="icon">
-                    <FaGithub />
-                  </div>
-                </IconContext.Provider>
-                <p className="iconText">GitHub</p>
-              </div>
-            </a>
-          </div>
+          <HomeLinks
+            link="mailto:wesleykok@hotmail.com"
+            icon={<MdMailOutline />}
+            text="Email"
+          ></HomeLinks>
+          <HomeLinks
+            link="https://www.linkedin.com/in/wesley-kok/"
+            icon={<FaLinkedin />}
+            text="LinkedIn"
+          ></HomeLinks>
+          <HomeLinks
+            link="https://github.com/WKhiro"
+            icon={<FaGithub />}
+            text="GitHub"
+          ></HomeLinks>
           <StyledImg src={punchy} />
         </Col>
 

@@ -5,10 +5,13 @@ import styled from "styled-components";
 const Styles = styled.div`
   .squeeze {
     padding: 20px;
-    border: solid;
-    border-color: white;
     margin-bottom: 10px;
     max-width: 1000px;
+    transition: all 0.2s linear;
+  }
+
+  .squeeze:hover {
+    transform: translate3D(0, -2px, 0);
   }
 
   /* Blog text */

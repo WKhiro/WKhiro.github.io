@@ -14,7 +14,8 @@ export const Blog = () => (
         the benefits of using the technology has been mind-boggling. With a helpful
         tutorial and a few days' worth of reading and writing code, I'm finally starting
         to understand the hype. I might switch over to Gatsby entirely for my personal
-        website, but we'll see how it goes in the next few days."
+        website, but we'll see how it goes in the next few days. I also learned that
+        I vastly prefer VSCode over Atom. I wish I switched earlier."
         date="07/08/2020"
       ></BlogPost>
       <BlogPost
