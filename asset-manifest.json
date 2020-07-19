@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb169971.chunk.css",
-    "main.js": "/static/js/main.1695c76e.chunk.js",
-    "main.js.map": "/static/js/main.1695c76e.chunk.js.map",
+    "main.css": "/static/css/main.717e6f17.chunk.css",
+    "main.js": "/static/js/main.9f35ed1d.chunk.js",
+    "main.js.map": "/static/js/main.9f35ed1d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.10482c78.js",
     "runtime-main.js.map": "/static/js/runtime-main.10482c78.js.map",
     "static/css/2.22d6b5ec.chunk.css": "/static/css/2.22d6b5ec.chunk.css",
-    "static/js/2.cf9cac93.chunk.js": "/static/js/2.cf9cac93.chunk.js",
-    "static/js/2.cf9cac93.chunk.js.map": "/static/js/2.cf9cac93.chunk.js.map",
+    "static/js/2.5db01ceb.chunk.js": "/static/js/2.5db01ceb.chunk.js",
+    "static/js/2.5db01ceb.chunk.js.map": "/static/js/2.5db01ceb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c99d55322ec4693202da9a4119e103bb.js": "/precache-manifest.c99d55322ec4693202da9a4119e103bb.js",
+    "precache-manifest.21789165dba403b0d141b607483173a7.js": "/precache-manifest.21789165dba403b0d141b607483173a7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.22d6b5ec.chunk.css.map": "/static/css/2.22d6b5ec.chunk.css.map",
-    "static/css/main.cb169971.chunk.css.map": "/static/css/main.cb169971.chunk.css.map",
-    "static/js/2.cf9cac93.chunk.js.LICENSE.txt": "/static/js/2.cf9cac93.chunk.js.LICENSE.txt",
+    "static/css/main.717e6f17.chunk.css.map": "/static/css/main.717e6f17.chunk.css.map",
+    "static/js/2.5db01ceb.chunk.js.LICENSE.txt": "/static/js/2.5db01ceb.chunk.js.LICENSE.txt",
     "static/media/binomialCrit.png": "/static/media/binomialCrit.d287956d.png",
     "static/media/bottomChampions.png": "/static/media/bottomChampions.31cf5d9a.png",
-    "static/media/movie.png": "/static/media/movie.57a3c055.png",
+    "static/media/hades.jpg": "/static/media/hades.c3127e08.jpg",
+    "static/media/movie.jpg": "/static/media/movie.b2083597.jpg",
     "static/media/punchy.png": "/static/media/punchy.409762fe.png",
     "static/media/statue.png": "/static/media/statue.dc307559.png",
     "static/media/topChampions.png": "/static/media/topChampions.3a0dfd92.png",
@@ -25,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.10482c78.js",
     "static/css/2.22d6b5ec.chunk.css",
-    "static/js/2.cf9cac93.chunk.js",
-    "static/css/main.cb169971.chunk.css",
-    "static/js/main.1695c76e.chunk.js"
+    "static/js/2.5db01ceb.chunk.js",
+    "static/css/main.717e6f17.chunk.css",
+    "static/js/main.9f35ed1d.chunk.js"
   ]
 }
