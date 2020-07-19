@@ -92,9 +92,9 @@ export const Home = () => (
             as ReactJS, Unity, Unreal Engine 4, and Android Studio. I've been
             exposed to a lot of coding languages as well, but never truly got to
             specialize in a select few. Currently, I'm aiming to specialize more
-            in Python, JavaScript, and HTML5/CSS3. Recently, I've been searching
-            for an entry-level software engineer position whilst improving my
-            coding proficiency in the meantime.
+            in Python, JavaScript, React.js, and HTML5/CSS3. Recently, I've been
+            searching for an entry-level software engineer position whilst
+            learning more about Gatsby, React.js, and GraphQL in the meantime.
           </p>
           <h3>Alma Mater</h3>
           <ul>

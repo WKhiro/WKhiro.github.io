@@ -1,7 +1,7 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
+import React from "react";
+import Container from "react-bootstrap/Container";
 // or import { Container } from 'react-bootstrap';
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Styles = styled.div`
   .reference {
@@ -12,8 +12,6 @@ const Styles = styled.div`
 
 export const Layout = (props) => (
   <Styles>
-  <Container>
-    {props.children}
-  </Container>
+    <Container>{props.children}</Container>
   </Styles>
-)
+);

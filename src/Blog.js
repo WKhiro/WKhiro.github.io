@@ -9,6 +9,17 @@ export const Blog = () => (
     <GradientBackground />
     <Container>
       <BlogPost
+        title="New Gatsby web application: Zag's Boons"
+        text="I've been working on creating a helpful web application with Gatsby, which
+        I've named Zag's Boons. It's a web application for the early access game Hades. I
+        noticed that there was no reliable/convenient way for a player to view branching
+        upgrades either within the game or online, which spurred the idea for this web
+        application. Since it's such a new game, I needed to create my own JSON file of
+        data, and query that data in using GraphQL. It's almost done; I just need to
+        add some CSS styling."
+        date="07/19/2020"
+      ></BlogPost>
+      <BlogPost
         title="Starting to Understand Gatsby, React, GraphQL"
         text="I've been able to create a simple blog website with Gatsby, and so far
         the benefits of using the technology has been mind-boggling. With a helpful

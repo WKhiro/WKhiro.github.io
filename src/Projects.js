@@ -5,7 +5,8 @@ import { Reference } from "./components/Reference";
 import styled from "styled-components";
 import statue from "./assets/statue.png";
 import wyvern from "./assets/wyvern.png";
-import movie from "./assets/movie.png";
+import movie from "./assets/movie.jpg";
+import hades from "./assets/hades.jpg";
 import ProjectItem from "./components/ProjectItem";
 import Sandbox from "./components/Sandbox";
 
@@ -42,7 +43,7 @@ export const Projects = () => (
         <Sandbox
           link="https://github.com/WKhiro/Gatsby/"
           title="Gatsby"
-          text="Work-in-progress Gatsby web app. (Gatsby is a React-based, GraphQL
+          text="Another work in progress Gatsby web app. (Gatsby is a React-based, GraphQL
             powered, static site generator)"
         ></Sandbox>
         <Sandbox
@@ -57,6 +58,15 @@ export const Projects = () => (
           text="Python script that pulls in data from the Riot Games API to generate win rates."
         ></Sandbox>
       </Container>
+      <ProjectItem
+        imgLink="https://zagsboons.netlify.app/"
+        imgSrc={hades}
+        title="Zag's Boons"
+        year="2020 - Present"
+        description="A React.js web application made with the Gatsby framework. Allows users to
+        quickly and easily view all branching upgrades and prerequisites within the game Hades. 
+        Utilizes GraphQL and a self-made JSON file."
+      ></ProjectItem>
       <ProjectItem
         imgLink="https://github.com/WKhiro/Statue_In_Space"
         imgSrc={statue}

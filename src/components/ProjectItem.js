@@ -11,8 +11,10 @@ const Styles = styled.div`
   mins: prevent web page repositioning during animation
   maxs: prevent elongated column height when reducing page size
 */
+
   .project.image {
     min-width: 202px;
+    max-width: 202px;
     min-height: 321px;
     max-height: 321px;
     border: 3px solid white;
@@ -32,12 +34,9 @@ export default function ProjectItem(props) {
   return (
     <Styles>
       <Container className="project">
-        <div className="project image">
-          <a href={props.imgLink}>
-            <img src={props.imgSrc} alt="" />
-          </a>
-        </div>
-
+        <a href={props.imgLink}>
+          <img className="project image" src={props.imgSrc} alt="" />
+        </a>
         <Container>
           <h1 className="project text">{props.title}</h1>
           <h5 className="project text">{props.year}</h5>
