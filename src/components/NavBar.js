@@ -80,11 +80,6 @@ export const NavBar = () => (
               Blog
             </NavLink>
           </Nav.Item>
-          <Nav.Item>
-            <NavLink className="nav-link" activeClassName="active" to="/gaming">
-              Gaming
-            </NavLink>
-          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
