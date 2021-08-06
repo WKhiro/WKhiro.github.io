@@ -62,7 +62,7 @@ export const Projects = () => (
         imgLink="https://zagsboons.netlify.app/"
         imgSrc={hades}
         title="Zag's Boons"
-        year="2020 - Present"
+        year="2020"
         description="A React.js web application made with the Gatsby framework. Allows users to
         quickly and easily view all branching upgrades and prerequisites within the game Hades. 
         Utilizes GraphQL and a self-made JSON file."

@@ -64,7 +64,7 @@ export const Home = () => (
             LinkedIn, or check out my projects directly on Github!
           </p>
           <HomeLinks
-            link="mailto:wesleykok@hotmail.com"
+            link="mailto:wesleykkok@gmail.com"
             icon={<MdMailOutline />}
             text="Email"
           ></HomeLinks>
@@ -85,16 +85,11 @@ export const Home = () => (
           <h1 className="header"> About Me </h1>
           <h3>Who Am I?</h3>
           <p>
-            I'm Wesley. I'm a fresh graduate, and an aspiring software engineer.
-            Besides pursuing formal education in Computer Science through
-            university courses, I began my journey into software development by
-            tinkering around with technologies I found interesting to me, such
-            as ReactJS, Unity, Unreal Engine 4, and Android Studio. I've been
-            exposed to a lot of coding languages as well, but never truly got to
-            specialize in a select few. Currently, I'm aiming to specialize more
-            in Python, JavaScript, React.js, and HTML5/CSS3. Recently, I've been
-            searching for an entry-level software engineer position whilst
-            learning more about Gatsby, React.js, and GraphQL in the meantime.
+            I'm Wesley. I'm a software engineer that develops applications based
+            on this motto: If I don't like the way my application looks or runs,
+            why would anyone else? My code is always written as cleanly and
+            simplistic as possible both for others, and for my forgetful future
+            self.
           </p>
           <h3>Alma Mater</h3>
           <ul>
@@ -114,15 +109,15 @@ export const Home = () => (
             </IconContext.Provider>
           </h3>
           <p>
-            I love playing video games and badminton. I was an active member of
-            the UCSD Badminton Team, and have played for my respective school's
-            team since high school (8 years). Outside of team practice, I often
-            played badminton recreationally as well (although not recently due
-            to COVID-19)
+            I'm an avid gamer; I mostly enjoy playing JRPGs, Nintendo games, and
+            Osu. I adore dogs and cats as well.
           </p>
           <p>
-            I'm also an avid gamer; I mostly enjoy playing League of Legends and
-            Nintendo games. I adore cats as well.
+            I enjoy playing badminton as well. I was an active member of the
+            UCSD Badminton Team, and have played for my respective school's team
+            since high school (8 years). Outside of team practice, I often
+            played badminton recreationally as well (although not recently due
+            to COVID-19)
           </p>
         </Col>
       </Row>
