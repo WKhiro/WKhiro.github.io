@@ -55,7 +55,7 @@ export const Reference = () => (
           <FaCopyright />
         </div>
       </IconContext.Provider>
-      <div className="iconText">2020 Wesley Kok</div>
+      <div className="iconText">2023 Wesley Kok</div>
     </div>
   </ReferenceStyle>
 );

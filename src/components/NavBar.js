@@ -75,11 +75,11 @@ export const NavBar = () => (
               Projects
             </NavLink>
           </Nav.Item>
-          <Nav.Item>
+          {/* <Nav.Item>
             <NavLink className="nav-link" activeClassName="active" to="/blog">
               Blog
             </NavLink>
-          </Nav.Item>
+          </Nav.Item> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

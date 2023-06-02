@@ -43,6 +43,12 @@ const Styles = styled.div`
     margin-left: 10px;
   }
 
+  .gamesColumns {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
   a {
     text-decoration: none;
   }
@@ -56,12 +62,11 @@ export const Home = () => (
         <Col xs className="welcomeText">
           <h1 className="header">Welcome!</h1>
           <p>
-            This is my personal website. I either linked you here myself, or you
-            got here via my GitHub. Either way, you can learn more about me by
-            reading the section to the right, or by looking at my blog or
-            projects page. <br />
+            Hi, I'm Wesley. I'm an aspiring full-stack engineer, and I love to
+            play video games in my free time.
+            <br />
             <br /> Here are some handy links if you want to email me, view my
-            LinkedIn, or check out my projects directly on Github!
+            LinkedIn, or check out my projects directly on Github.
           </p>
           <HomeLinks
             link="mailto:wesleykkok@gmail.com"
@@ -83,24 +88,21 @@ export const Home = () => (
 
         <Col xs className="welcomeText right">
           <h1 className="header"> About Me </h1>
-          <h3>Who Am I?</h3>
+          <h3>Technical Stuff</h3>
           <p>
-            I'm Wesley. I'm a software engineer that develops applications based
-            on this motto: If I don't like the way my application looks or runs,
-            why would anyone else? My code is always written as cleanly and
-            simplistic as possible both for others, and for my forgetful future
-            self.
+            I am full-stack capable, but I prefer frontend development more than
+            backend development.
+            <br />
+            Besides playing games in my free time, I like to make web
+            applications and learn about game development with Unity and Unreal
+            Engine as well. My proficiency with game engines is low though; it's
+            currently just a hobby and I haven't had to utilize either tool in a
+            professional setting yet.
           </p>
           <h3>Alma Mater</h3>
           <ul>
             <li>University of California - San Diego</li>
             <li>B.S. in Computer Science (Spring 2020)</li>
-          </ul>
-          <h6>Favorite Courses</h6>
-          <ul>
-            <li>Artificial Intelligence</li>
-            <li>Computer Security</li>
-            <li>Computer Graphics</li>
           </ul>
           <h3 className="headerH3">
             Hobbies and Interests
@@ -109,15 +111,23 @@ export const Home = () => (
             </IconContext.Provider>
           </h3>
           <p>
-            I'm an avid gamer; I mostly enjoy playing JRPGs, Nintendo games, and
-            Osu. I adore dogs and cats as well.
+            I'm an avid gamer, and play a variety of games in my free time. Here
+            are some examples:
           </p>
+          <ul className="gamesColumns">
+            <li>League of Legends</li>
+            <li>Valorant</li>
+            <li>Overwatch</li>
+            <li>Apex Legends</li>
+            <li>Osu</li>
+            <li>Nintendo Games</li>
+            <li>JRPGs</li>
+          </ul>
           <p>
             I enjoy playing badminton as well. I was an active member of the
             UCSD Badminton Team, and have played for my respective school's team
             since high school (8 years). Outside of team practice, I often
-            played badminton recreationally as well (although not recently due
-            to COVID-19)
+            played badminton recreationally as well.
           </p>
         </Col>
       </Row>
